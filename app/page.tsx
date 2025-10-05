@@ -1,103 +1,133 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/hero-section-5";
+import { FeaturesSectionWithHoverEffects } from "@/components/feature-section-with-hover-effects";
+import { FeatureSteps } from "@/components/feature-section";
+import { ZoomParallax } from "@/components/zoom-parallax";
+import { Feature } from "@/components/ui/feature-with-image-comparison";
+import { Blog7 } from "@/components/blog7";
+import Contact2 from "@/components/contact-section";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const features = [
+    {
+      step: "Step 1",
+      title: "Carbon Absorption",
+      content: "PLA production starts with sugarcane, which naturally absorbs CO₂ from the atmosphere during growth.",
+      image: "/pla-journey-1.webp",
+    },
+    {
+      step: "Step 2",
+      title: "Sustainable Harvesting",
+      content: "Only 1.75 m² of land needed per kg of PLA, ensuring efficient and sustainable land utilization.",
+      image: "/pla-journey-2.webp",
+    },
+    {
+      step: "Step 3",
+      title: "PLA Manufacturing",
+      content: "State-of-the-art production powered by 100% renewable energy in India's first industrial-scale plant.",
+      image: "/pla-journey-3.webp",
+    },
+    {
+      step: "Step 4",
+      title: "Circular Economy",
+      content: "PLA products decompose naturally or can be recycled, completing the earth-to-earth cycle with minimal emissions.",
+      image: "/pla-journey-4.webp",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const parallaxImages = [
+    {
+      src: "/image7.webp",
+      alt: "Sugarcane Seed - It starts with a seed"
+    },
+    {
+      src: "/image2.webp",
+      alt: "Growing Sugarcane Field - Nature's carbon capture"
+    },
+    {
+      src: "/image1.webp",
+      alt: "Harvesting - Sustainable farming"
+    },
+    {
+      src: "/image3.webp",
+      alt: "Sugar Extraction - Raw material processing"
+    },
+    {
+      src: "/image5.webp",
+      alt: "PLA Manufacturing - Bio-transformation"
+    },
+    {
+      src: "/image6.webp",
+      alt: "PLA Products - Sustainable solutions"
+    },
+    {
+      src: "/image4.webp",
+      alt: "Circular Economy - Back to earth"
+    },
+  ];
+
+  const blogPosts = [
+    {
+      id: "post-1",
+      title: "The Future of Sustainable Packaging",
+      summary:
+        "Discover how PLA bioplastics are revolutionizing the packaging industry with eco-friendly alternatives that reduce carbon footprint and plastic waste.",
+      label: "Sustainability",
+      author: "Dr. Priya Sharma",
+      published: "15 Dec 2024",
+      url: "/blog/future-of-sustainable-packaging",
+      image: "/image5.webp",
+    },
+    {
+      id: "post-2",
+      title: "From Sugarcane to Bioplastic: The PLA Journey",
+      summary:
+        "Explore the fascinating process of transforming sugarcane into high-quality PLA bioplastics and how it's creating a circular economy.",
+      label: "Innovation",
+      author: "Rajesh Kumar",
+      published: "10 Dec 2024",
+      url: "/blog/sugarcane-to-bioplastic-journey",
+      image: "/image3.webp",
+    },
+    {
+      id: "post-3",
+      title: "Why India is Leading the Bioplastics Revolution",
+      summary:
+        "Learn about India's first industrial-scale PLA plant and how it's positioning the country as a global leader in sustainable materials.",
+      label: "Industry",
+      author: "Ananya Desai",
+      published: "5 Dec 2024",
+      url: "/blog/india-leading-bioplastics-revolution",
+      image: "/image2.webp",
+    },
+  ];
+
+  return (
+    <>
+      <HeroSection />
+      <FeaturesSectionWithHoverEffects />
+      <FeatureSteps
+        features={features}
+        title="The PLA Journey"
+      />
+      <section className="py-12 px-4 md:py-20 md:px-6 lg:px-12 bg-background">
+        <div className="max-w-7xl mx-auto text-center space-y-3 md:space-y-4 mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-ozean">From Seed to Sustainability</h2>
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
+            Follow the journey from a single seed to a sustainable future, completing nature's perfect cycle
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      <ZoomParallax images={parallaxImages} />
+      <Feature />
+      <Blog7
+        tagline="Latest Updates"
+        heading="News & Insights"
+        description="Discover the latest in sustainable bioplastics and eco-innovation."
+        buttonText="View all articles"
+        buttonUrl="/blog"
+        posts={blogPosts}
+      />
+      <Contact2 />
+    </>
   );
 }

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemedClickSpark } from "@/components/themed-click-spark";
+import { SmoothCursor } from "@/components/smooth-cursor";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +15,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const ozean = localFont({
+  src: "../fonts/ozean.ttf",
+  variable: "--font-ozean",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +34,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ozean.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <SmoothCursor />
+          <ThemedClickSpark>
+            {children}
+            <Footer />
+          </ThemedClickSpark>
+        </ThemeProvider>
       </body>
     </html>
   );

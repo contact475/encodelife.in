@@ -25,7 +25,7 @@
       ]
     },
     {
-      "source": "/fonts/(.*)",
+      "source": "/fonts/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(jpg|jpeg|png|webp|gif|svg|ico))",
+      "source": "/:path*.(jpg|jpeg|png|webp|gif|svg|ico)",
       "headers": [
         {
           "key": "Cache-Control",

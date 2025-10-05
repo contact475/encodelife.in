@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circular background -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  
+  <!-- DNA helix / Leaf combination -->
+  <!-- Left strand -->
+  <path d="M 30 20 Q 25 35 30 50 Q 35 65 30 80" 
+        stroke="white" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Right strand -->
+  <path d="M 70 20 Q 75 35 70 50 Q 65 65 70 80" 
+        stroke="white" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Connecting lines (DNA rungs) -->
+  <line x1="30" y1="25" x2="70" y2="25" stroke="white" stroke-width="2" opacity="0.8"/>
+  <line x1="32" y1="35" x2="68" y2="35" stroke="white" stroke-width="2" opacity="0.8"/>
+  <line x1="30" y1="50" x2="70" y2="50" stroke="white" stroke-width="2" opacity="0.8"/>
+  <line x1="32" y1="65" x2="68" y2="65" stroke="white" stroke-width="2" opacity="0.8"/>
+  <line x1="30" y1="75" x2="70" y2="75" stroke="white" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Leaf accent -->
+  <path d="M 50 15 Q 60 25 50 35 Q 40 25 50 15" 
+        fill="white" 
+        opacity="0.9"/>
+</svg>

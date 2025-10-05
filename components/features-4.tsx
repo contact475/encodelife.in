@@ -6,7 +6,7 @@ export function AboutUs() {
             <div className="mx-auto max-w-7xl space-y-12 px-6 lg:px-12 md:space-y-16">
                 <div className="relative z-10 max-w-2xl space-y-4">
                     <h2 className="text-balance text-5xl font-medium lg:text-6xl">About Us</h2>
-                    <p className="text-lg text-muted-foreground">We're dedicated to building innovative solutions that empower teams and transform businesses. Our mission is to deliver excellence through cutting-edge technology and exceptional service.</p>
+                    <p className="text-lg text-muted-foreground">We&apos;re dedicated to building innovative solutions that empower teams and transform businesses. Our mission is to deliver excellence through cutting-edge technology and exceptional service.</p>
                 </div>
 
                 <div className="relative mx-auto grid max-w-3xl lg:max-w-5xl divide-x divide-y border *:p-14 sm:grid-cols-2 lg:grid-cols-3">

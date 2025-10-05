@@ -111,11 +111,11 @@ export default function Contact2() {
             className="order-1 lg:order-1"
           >
             <h2 className="text-pretty text-3xl md:text-4xl md:text-5xl lg:text-6xl font-medium font-ozean tracking-tight text-foreground">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
             <p className="mt-2 md:mt-3 max-w-xl text-sm md:text-[17px] leading-relaxed text-muted-foreground">
               Have questions about PLA bioplastics or interested in partnership opportunities? 
-              We're here to help and typically respond within 24 hours.
+              We&apos;re here to help and typically respond within 24 hours.
             </p>
 
             <div className="mt-4 md:mt-6 flex flex-wrap gap-2 md:gap-3">
@@ -182,7 +182,7 @@ export default function Contact2() {
                     Send us a message
                   </h3>
                   <p className="mt-1 text-xs md:text-sm text-muted-foreground">
-                    We'll get back within 24h.
+                    We&apos;ll get back within 24h.
                   </p>
                 </div>
                 <span className="hidden rounded-full bg-emerald-50 px-2 md:px-3 py-1 md:py-1.5 text-xs font-medium text-emerald-700 ring-1 ring-emerald-200 sm:block dark:bg-emerald-400/10 dark:text-emerald-300 dark:ring-emerald-400/20">

@@ -39,7 +39,7 @@ export function FeaturesSectionWithHoverEffects() {
             </p>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              We are establishing India's first industrial-scale biopolymer plant, transforming renewable sugarcane 
+              We are establishing India&apos;s first industrial-scale biopolymer plant, transforming renewable sugarcane 
               into sustainable PLA bioplastics. Our bio-based materials naturally absorb CO₂ during growth and are 
               powered entirely by 100% renewable energy.
             </p>

@@ -4,6 +4,7 @@ import { FeatureSteps } from "@/components/feature-section";
 import { ZoomParallax } from "@/components/zoom-parallax";
 import { Feature } from "@/components/ui/feature-with-image-comparison";
 import { Blog7 } from "@/components/blog7";
+import { CollaboratorsSection } from "@/components/collaborators-section";
 import Contact2 from "@/components/contact-section";
 
 export default function Home() {
@@ -127,6 +128,7 @@ export default function Home() {
         buttonUrl="/blog"
         posts={blogPosts}
       />
+      <CollaboratorsSection />
       <Contact2 />
     </>
   );

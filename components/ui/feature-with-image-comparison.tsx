@@ -16,12 +16,12 @@ function Feature() {
     offset: ["start center", "end center"]
   });
 
-  // Auto-slide based on scroll - only when component is in view
+  // Auto-slide based on scroll - 2x faster animation
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       if (!onMouseDown) {
-        // Smooth transition from 0 to 100 as user scrolls through the section
-        const sliderPosition = Math.max(0, Math.min(100, latest * 100));
+        // 2x faster: multiply by 200 and clamp to 100
+        const sliderPosition = Math.max(0, Math.min(100, latest * 200));
         setInset(sliderPosition);
       }
     });
@@ -154,8 +154,8 @@ function Feature() {
           </div>
         </div>
         
-        {/* Bottom spacer - creates scroll space for the animation */}
-        <div className="h-[200vh]" />
+        {/* Bottom spacer - reduced for 2x faster animation */}
+        <div className="h-[100vh]" />
       </div>
     </div>
   );

@@ -25,12 +25,12 @@ const ozean = localFont({
 
 export const metadata: Metadata = {
   title: "Encode Life - Sustainable Bioplastics | India's First PLA Plant",
-  description: "India's first industrial-scale PLA biopolymer plant. Transforming sugarcane into sustainable bioplastics, powered by 100% renewable energy. Creating a circular economy for a greener tomorrow.",
-  keywords: ["PLA", "bioplastics", "sustainable", "renewable energy", "circular economy", "sugarcane", "India", "Encode Life"],
+  description: "India's first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics, powered by 100% renewable energy. Creating a circular economy for a greener tomorrow.",
+  keywords: ["PLA", "bioplastics", "sustainable", "renewable energy", "circular economy", "corn", "India", "Encode Life"],
   authors: [{ name: "Encode Life" }],
   openGraph: {
     title: "Encode Life - Sustainable Bioplastics",
-    description: "India's first industrial-scale PLA biopolymer plant. Transforming sugarcane into sustainable bioplastics.",
+    description: "India's first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics.",
     url: "https://encodelife.in",
     siteName: "Encode Life",
     locale: "en_US",

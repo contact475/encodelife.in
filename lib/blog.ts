@@ -27,9 +27,9 @@ The packaging industry is undergoing a revolutionary transformation, driven by t
 
 ## Why PLA Bioplastics Matter
 
-Traditional petroleum-based plastics have dominated the packaging industry for decades, but their environmental impact is undeniable. PLA bioplastics, derived from renewable resources like sugarcane, offer a compelling alternative:
+Traditional petroleum-based plastics have dominated the packaging industry for decades, but their environmental impact is undeniable. PLA bioplastics, derived from renewable resources like corn, offer a compelling alternative:
 
-- **Carbon Negative Production**: Sugarcane absorbs CO₂ during growth, making PLA production carbon negative
+- **Carbon Negative Production**: Corn absorbs CO₂ during growth, making PLA production carbon negative
 - **Biodegradable**: Unlike traditional plastics, PLA can decompose naturally under the right conditions
 - **Versatile Applications**: From food packaging to medical supplies, PLA's versatility matches traditional plastics
 
@@ -51,31 +51,31 @@ The future of packaging is undeniably sustainable. As technology advances and pr
     `,
   },
   {
-    slug: "sugarcane-to-bioplastic-journey",
-    title: "From Sugarcane to Bioplastic: The PLA Journey",
+    slug: "corn-to-bioplastic-journey",
+    title: "From Corn to Bioplastic: The PLA Journey",
     description:
-      "Explore the fascinating process of transforming sugarcane into high-quality PLA bioplastics and how it's creating a circular economy.",
+      "Explore the fascinating process of transforming corn into high-quality PLA bioplastics and how it's creating a circular economy.",
     date: "2024-12-10",
     author: "Rajesh Kumar",
     thumbnail: "/image3.webp",
     tags: ["Manufacturing", "Process", "Circular Economy"],
     content: `
-# From Sugarcane to Bioplastic: The PLA Journey
+# From Corn to Bioplastic: The PLA Journey
 
-The transformation of sugarcane into PLA bioplastic is a remarkable example of modern biotechnology meeting sustainable manufacturing. Let's explore this fascinating journey from field to finished product.
+The transformation of corn into PLA bioplastic is a remarkable example of modern biotechnology meeting sustainable manufacturing. Let's explore this fascinating journey from field to finished product.
 
 ## Step 1: Cultivation and Carbon Capture
 
-The journey begins in sugarcane fields, where plants naturally absorb CO₂ from the atmosphere through photosynthesis. This carbon capture is the first step in creating a carbon-negative product.
+The journey begins in corn fields, where plants naturally absorb CO₂ from the atmosphere through photosynthesis. This carbon capture is the first step in creating a carbon-negative product.
 
 ### Key Facts:
 - Only 1.75 m² of land needed per kg of PLA
-- Sugarcane grows rapidly, reaching maturity in 12-18 months
+- Corn grows rapidly, reaching maturity in 12-18 months
 - Efficient water usage compared to other crops
 
 ## Step 2: Sugar Extraction
 
-Once harvested, sugarcane undergoes processing to extract sugar. This traditional process has been optimized over centuries and is highly efficient.
+Once harvested, corn undergoes processing to extract sugar. This traditional process has been optimized over centuries and is highly efficient.
 
 ## Step 3: Fermentation
 
@@ -119,7 +119,7 @@ India is emerging as a global powerhouse in the bioplastics industry, with strat
 ## Strategic Advantages
 
 ### 1. Agricultural Abundance
-India is the world's second-largest producer of sugarcane, providing an abundant and sustainable feedstock for PLA production.
+India is one of the world's largest producers of corn, providing an abundant and sustainable feedstock for PLA production.
 
 ### 2. Manufacturing Expertise
 Decades of experience in chemical and polymer manufacturing provide the technical foundation for bioplastics production.

@@ -133,7 +133,7 @@ export async function POST(request: Request) {
                         <td style="background-color: #f9fafb; padding: 20px; text-align: center; border-top: 1px solid #e5e7eb;">
                             <p style="margin: 0; font-size: 13px; color: #6b7280; line-height: 1.6;">
                                 This message was sent via the <strong style="color: #10b981;">Encode Life</strong> contact form<br>
-                                Transforming sugarcane into sustainable bioplastics
+                                Transforming corn into sustainable bioplastics
                             </p>
                             <p style="margin: 15px 0 0 0; font-size: 12px; color: #9ca3af;">
                                 ${new Date().toLocaleString('en-US', {

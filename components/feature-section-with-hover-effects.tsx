@@ -23,7 +23,7 @@ export function FeaturesSectionWithHoverEffects() {
           <div className="relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl md:order-2">
             <img
               src="/image2.webp"
-              alt="Sustainable sugarcane farming"
+              alt="Sustainable corn farming"
               className="w-full h-full object-cover"
             />
           </div>
@@ -36,7 +36,7 @@ export function FeaturesSectionWithHoverEffects() {
             </p>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              We are establishing India&apos;s first industrial-scale biopolymer plant, transforming renewable sugarcane 
+              We are establishing India&apos;s first industrial-scale biopolymer plant, transforming renewable corn 
               into sustainable PLA bioplastics. Our bio-based materials naturally absorb CO₂ during growth and are 
               powered entirely by 100% renewable energy.
             </p>

@@ -12,7 +12,7 @@ export default function Home() {
     {
       step: "Step 1",
       title: "Carbon Absorption",
-      content: "PLA production starts with sugarcane, which naturally absorbs CO₂ from the atmosphere during growth.",
+      content: "PLA production starts with corn, which naturally absorbs CO₂ from the atmosphere during growth.",
       image: "/pla-journey-1.webp",
     },
     {
@@ -38,11 +38,11 @@ export default function Home() {
   const parallaxImages = [
     {
       src: "/image7.webp",
-      alt: "Sugarcane Seed - It starts with a seed"
+      alt: "Corn Seed - It starts with a seed"
     },
     {
       src: "/image2.webp",
-      alt: "Growing Sugarcane Field - Nature's carbon capture"
+      alt: "Growing Corn Field - Nature's carbon capture"
     },
     {
       src: "/image1.webp",
@@ -80,13 +80,13 @@ export default function Home() {
     },
     {
       id: "post-2",
-      title: "From Sugarcane to Bioplastic: The PLA Journey",
+      title: "From Corn to Bioplastic: The PLA Journey",
       summary:
-        "Explore the fascinating process of transforming sugarcane into high-quality PLA bioplastics and how it's creating a circular economy.",
+        "Explore the fascinating process of transforming corn into high-quality PLA bioplastics and how it's creating a circular economy.",
       label: "Innovation",
       author: "Rajesh Kumar",
       published: "10 Dec 2024",
-      url: "/blog/sugarcane-to-bioplastic-journey",
+      url: "/blog/corn-to-bioplastic-journey",
       image: "/image3.webp",
     },
     {

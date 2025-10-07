@@ -61,7 +61,7 @@ export default function Footer() {
       {/* Right section - Tagline, Social, Copyright */}
       <div className="flex flex-col items-center md:items-end text-center md:text-right gap-2 w-full md:w-auto">
         <p className="max-w-60 text-slate-600 dark:text-slate-300 text-xs md:text-sm">
-          Transforming sugarcane into sustainable bioplastics for a greener tomorrow.
+          Transforming corn into sustainable bioplastics for a greener tomorrow.
         </p>
         <div className="flex items-center gap-3 md:gap-4 mt-2 md:mt-3">
           <Link

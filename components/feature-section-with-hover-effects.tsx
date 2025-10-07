@@ -22,8 +22,8 @@ export function FeaturesSectionWithHoverEffects() {
           {/* Image - Shows first on mobile, second on desktop */}
           <div className="relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl md:order-2">
             <img
-              src="/image2.webp"
-              alt="Sustainable corn farming"
+              src="/about-biotechnology.webp"
+              alt="Vibrant biotechnology landscape with golden cornfields, modern eco-friendly biopolymer factory, solar panels, wind turbines, and circular economy elements showcasing sustainable innovation"
               className="w-full h-full object-cover"
             />
           </div>

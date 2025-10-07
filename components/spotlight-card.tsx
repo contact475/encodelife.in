@@ -52,41 +52,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
     return () => document.removeEventListener('pointermove', syncPointer);
   }, []);
 
-  // Add scroll-based animation for mobile/touch devices
-  useEffect(() => {
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if (!isTouchDevice || !cardRef.current) return;
-
-    const animateOnScroll = () => {
-      if (!cardRef.current) return;
-      
-      const rect = cardRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      
-      // Animate based on card position in viewport
-      const scrollProgress = Math.max(0, Math.min(1, centerY / window.innerHeight));
-      const x = centerX + Math.sin(scrollProgress * Math.PI * 2) * 100;
-      const y = centerY + Math.cos(scrollProgress * Math.PI * 2) * 100;
-      
-      cardRef.current.style.setProperty('--x', x.toFixed(2));
-      cardRef.current.style.setProperty('--xp', (x / window.innerWidth).toFixed(2));
-      cardRef.current.style.setProperty('--y', y.toFixed(2));
-      cardRef.current.style.setProperty('--yp', (y / window.innerHeight).toFixed(2));
-    };
-
-    // Initial animation
-    animateOnScroll();
-    
-    // Animate on scroll
-    window.addEventListener('scroll', animateOnScroll, { passive: true });
-    window.addEventListener('resize', animateOnScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', animateOnScroll);
-      window.removeEventListener('resize', animateOnScroll);
-    };
-  }, []);
+  // Scroll-based animation disabled for mobile/tablet devices
+  // Only desktop (pointer devices) will have the spotlight effect
 
   const { base, spread } = glowColorMap[glowColor];
 

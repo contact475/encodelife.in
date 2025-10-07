@@ -114,15 +114,15 @@ const HeroHeader = () => {
                                 aria-label="home"
                                 className="flex items-center space-x-2 sm:space-x-3">
                                 <img src="/logo.png" alt="Encode Life Logo" className="h-7 sm:h-8 w-auto" />
-                                <span className="text-lg sm:text-xl font-bold text-black dark:text-white lg:text-white">Encode Life</span>
+                                <span className={cn("text-lg sm:text-xl font-bold transition-colors duration-300", scrolled ? "text-foreground" : "text-black dark:text-white lg:text-white")}>Encode Life</span>
                             </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
                                 aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
                                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                <Menu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200 text-black dark:text-white" />
-                                <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 text-black dark:text-white" />
+                                <Menu className={cn("group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200 transition-colors", scrolled ? "text-foreground" : "text-black dark:text-white")} />
+                                <X className={cn("group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 transition-colors", scrolled ? "text-foreground" : "text-black dark:text-white")} />
                             </button>
 
                             <div className="hidden lg:block">
@@ -131,7 +131,7 @@ const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-white/80 hover:text-white block duration-150">
+                                                className={cn("block duration-150 transition-colors", scrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white")}>
                                                 <span>{item.name}</span>
                                             </Link>
                                         </li>

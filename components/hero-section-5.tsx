@@ -31,7 +31,7 @@ export function HeroSection() {
                                 muted
                                 playsInline
                                 className="size-full object-cover"
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477"></video>
+                                src="https://cdn.pixabay.com/video/2020/02/17/32479-392186775_large.mp4"></video>
                         </div>
                         <div className="relative z-10 flex items-center justify-center h-full min-h-[600px] md:min-h-[500px] lg:min-h-0 px-6 lg:px-12">
                             <div className="mx-auto max-w-7xl w-full text-center lg:text-left pt-20 md:pt-0">

@@ -36,11 +36,11 @@ export default function Footer() {
           </div>
 
           <div className="text-left md:text-left">
-            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Get in Touch</p>
+            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Call Us</p>
             <ul className="mt-2 space-y-1.5 md:space-y-2">
               <li>
-                <Link href="tel:+918448713902" className="hover:text-green-500 transition">
-                  +91 84487 13902
+                <Link href="tel:+919711243043" className="hover:text-green-500 transition">
+                  +91 9711243043
                 </Link>
               </li>
               <li>

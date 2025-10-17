@@ -11,7 +11,9 @@ const sectionBg =
 const container = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8";
 
 const card =
-  "relative overflow-hidden rounded-2xl bg-card shadow-lg ring-1 ring-border dark:shadow-2xl";
+  "relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-border dark:shadow-2xl";
+
+const cardWithBg = `${card}`;
 
 const input =
   "peer block w-full rounded-xl border border-input bg-background px-4 pt-5 pb-2 text-[15px] text-foreground placeholder-transparent outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30";
@@ -110,7 +112,7 @@ export default function Contact2() {
             transition={{ duration: 0.55, ease: "easeOut" }}
             className="order-1 lg:order-1"
           >
-            <h2 className="text-pretty text-3xl md:text-4xl md:text-5xl lg:text-6xl font-medium font-ozean tracking-tight text-foreground">
+            <h2 className="text-pretty text-3xl md:text-4xl md:text-5xl lg:text-6xl font-semibold italic font-newsreader tracking-tight text-foreground">
               Let&apos;s Connect
             </h2>
             <p className="mt-2 md:mt-3 max-w-xl text-sm md:text-[17px] leading-relaxed text-muted-foreground">
@@ -119,9 +121,9 @@ export default function Contact2() {
             </p>
 
             <div className="mt-4 md:mt-6 flex flex-wrap gap-2 md:gap-3">
-              <span className={pill}>24h response SLA</span>
-              <span className={pill}>Global team</span>
-              <span className={pill}>No sales fluff</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm shadow-sm transition hover:bg-accent" style={{ backgroundColor: '#046a38', color: '#ff9913', borderColor: '#035028' }}>24h response SLA</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm shadow-sm transition hover:bg-accent" style={{ backgroundColor: '#046a38', color: '#ff9913', borderColor: '#035028' }}>Global team</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm shadow-sm transition hover:bg-accent" style={{ backgroundColor: '#046a38', color: '#ff9913', borderColor: '#035028' }}>No sales fluff</span>
             </div>
 
             <div className="mt-6 md:mt-10 grid grid-cols-1 gap-3 md:gap-5 sm:grid-cols-2">
@@ -132,10 +134,11 @@ export default function Contact2() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.05 * i }}
-                  className={`${card} p-4 md:p-6 hover:shadow-xl transition-shadow`}
+                  className={`${cardWithBg} p-4 md:p-6 hover:shadow-xl transition-shadow`}
+                  style={{ backgroundColor: '#046a38' }}
                 >
                   <div className="flex items-start gap-3 md:gap-5">
-                    <div className="flex h-10 w-10 md:h-14 md:w-14 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
+                    <div className="flex h-10 w-10 md:h-14 md:w-14 flex-shrink-0 items-center justify-center rounded-xl" style={{ backgroundColor: 'transparent', color: '#ff9913' }}>
                       <m.icon className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -175,13 +178,13 @@ export default function Contact2() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="order-2 lg:order-2"
           >
-            <div className={`${card} p-4 sm:p-6 sm:p-8 lg:p-10`}>
+            <div className={`${cardWithBg} p-4 sm:p-6 sm:p-8 lg:p-10`} style={{ backgroundColor: '#9DE7D7' }}>
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight text-foreground">
                     Send us a message
                   </h3>
-                  <p className="mt-1 text-xs md:text-sm text-muted-foreground">
+                  <p className="mt-1 text-xs md:text-sm" style={{ color: '#ff9913' }}>
                     We&apos;ll get back within 24h.
                   </p>
                 </div>
@@ -268,7 +271,8 @@ export default function Contact2() {
                 <div className="sm:col-span-2">
                   <button 
                     type="submit" 
-                    className={btn} 
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-white shadow-lg transition hover:opacity-90 active:scale-[.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    style={{ background: 'linear-gradient(135deg, #ff9913 0%, #ff6b35 100%)' }}
                     disabled={loading || ok}
                   >
                     {loading ? (

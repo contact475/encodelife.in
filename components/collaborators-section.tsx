@@ -7,43 +7,37 @@ import { GlowCard } from '@/components/spotlight-card'
 const collaborators = [
   {
     name: 'DPIIT',
-    logoBlack: '/logos/dpiit-black.png',
-    logoWhite: '/logos/dpiit-white.png',
+    logo: '/logos/dpiit.webp',
     description: 'Supporting innovation and entrepreneurship through government initiatives',
     glowColor: 'green' as const,
   },
   {
     name: 'IIT Guwahati',
-    logoBlack: '/logos/iitg-black.png',
-    logoWhite: '/logos/iitg-white.png',
+    logo: '/logos/iitg.webp',
     description: 'Premier technology institute providing research collaboration',
     glowColor: 'green' as const,
   },
   {
     name: 'Make in India',
-    logoBlack: '/logos/makeinindia-black.png',
-    logoWhite: '/logos/makeinindia-white.png',
+    logo: '/logos/makeinindia.webp',
     description: 'National initiative promoting manufacturing and innovation',
     glowColor: 'green' as const,
   },
   {
     name: 'Manav Rachna',
-    logoBlack: '/logos/manavrachna-black.png',
-    logoWhite: '/logos/manavrachna-white.png',
+    logo: '/logos/manavrachna.webp',
     description: 'Educational partner fostering sustainable development',
     glowColor: 'green' as const,
   },
   {
     name: 'Start in UP',
-    logoBlack: '/logos/startinup-black.png',
-    logoWhite: '/logos/startinup-white.png',
+    logo: '/logos/startinup.webp',
     description: 'Supporting startups and entrepreneurship in Uttar Pradesh',
     glowColor: 'green' as const,
   },
   {
     name: 'Startup India',
-    logoBlack: '/logos/startupindia-black.png',
-    logoWhite: '/logos/startupindia-white.png',
+    logo: '/logos/startupindia.webp',
     description: 'Building a strong startup ecosystem across India',
     glowColor: 'green' as const,
   },
@@ -58,7 +52,7 @@ export function CollaboratorsSection() {
           <Badge variant="secondary" className="mb-3 text-xs md:mb-6 md:text-sm">
             Our Partners
           </Badge>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-ozean mb-2 md:mb-3">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold italic font-newsreader mb-2 md:mb-3">
             Collaborators & Supporters
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
@@ -80,30 +74,27 @@ export function CollaboratorsSection() {
               <GlowCard
                 glowColor={collaborator.glowColor}
                 customSize={true}
-                className="w-full h-full min-h-[240px] md:min-h-[260px] flex flex-col hover:shadow-2xl transition-all duration-300"
+                customBgColor="#E1EACD"
+                disableGlow={true}
+                className="w-full h-full min-h-[240px] md:min-h-[260px] flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
               >
                 <div className="flex-1 flex flex-col items-center justify-center p-5 md:p-6 gap-3">
                   {/* Logo */}
                   <div className="flex items-center justify-center h-14 md:h-16 w-full">
                     <img
-                      className="max-h-full w-auto max-w-[110px] md:max-w-[130px] object-contain dark:hidden transition-transform duration-300 hover:scale-105"
-                      src={collaborator.logoBlack}
-                      alt={`${collaborator.name} Logo`}
-                    />
-                    <img
-                      className="max-h-full w-auto max-w-[110px] md:max-w-[130px] object-contain hidden dark:block transition-transform duration-300 hover:scale-105"
-                      src={collaborator.logoWhite}
+                      className="max-h-full w-auto max-w-[110px] md:max-w-[130px] object-contain transition-transform duration-300 hover:scale-105"
+                      src={collaborator.logo}
                       alt={`${collaborator.name} Logo`}
                     />
                   </div>
                   
                   {/* Name */}
-                  <h3 className="text-base md:text-lg font-semibold text-center text-foreground">
+                  <h3 className="text-base md:text-lg font-semibold text-center text-black">
                     {collaborator.name}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-xs md:text-sm text-muted-foreground text-center leading-relaxed line-clamp-2">
+                  <p className="text-xs md:text-sm text-black text-center leading-relaxed line-clamp-2">
                     {collaborator.description}
                   </p>
                 </div>

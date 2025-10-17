@@ -58,7 +58,7 @@ export function FeatureSteps({
 
       <div className="sticky top-0 min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12">
         <div className="max-w-7xl mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-medium font-ozean mb-6 md:mb-10 text-center">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-semibold italic font-newsreader mb-6 md:mb-10 text-center">
             {title}
           </h2>
 

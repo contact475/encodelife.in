@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemedClickSpark } from "@/components/themed-click-spark";
-import { SmoothCursor } from "@/components/smooth-cursor";
 import Footer from "@/components/footer";
 
 const geistSans = Geist({
@@ -15,6 +14,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+  weight: ["600"],
+  style: ["italic"],
 });
 
 const ozean = localFont({
@@ -51,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ozean.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ozean.variable} ${newsreader.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -59,7 +65,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <SmoothCursor />
           <ThemedClickSpark>
             {children}
             <Footer />

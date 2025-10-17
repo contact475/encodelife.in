@@ -13,7 +13,7 @@ export function FeaturesSectionWithHoverEffects() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-medium font-ozean mb-2">About Us</h2>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold italic font-newsreader mb-2">About Us</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full"></div>
         </div>
 

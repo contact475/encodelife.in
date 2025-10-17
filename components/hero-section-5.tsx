@@ -33,7 +33,7 @@ export function HeroSection() {
                                 className="size-full object-cover"
                                 src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477"></video>
                         </div>
-                        <div className="relative z-10 flex items-center justify-center h-full min-h-[600px] md:min-h-[700px] lg:min-h-0 px-6 lg:px-12">
+                        <div className="relative z-10 flex items-center justify-center h-full min-h-[600px] md:min-h-[500px] lg:min-h-0 px-6 lg:px-12">
                             <div className="mx-auto max-w-7xl w-full text-center lg:text-left pt-20 md:pt-0">
                                 <h1 className="max-w-3xl mx-auto lg:mx-0 text-balance text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-white font-bold leading-tight">The Era of Bio Circularity</h1>
                                 <p className="mt-6 md:mt-8 max-w-2xl mx-auto lg:mx-0 text-balance text-base sm:text-lg md:text-xl text-white/90">India&apos;s first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics, powered by 100% renewable energy.</p>

@@ -120,7 +120,7 @@ export default function RadialTimelineSection({
       ref={containerRef}
       onClick={handleContainerClick}
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold italic font-newsreader mb-16 text-center">
         {title}
       </h2>
 

@@ -8,6 +8,8 @@ interface GlowCardProps {
   width?: string | number;
   height?: string | number;
   customSize?: boolean; // When true, ignores size prop and uses width/height or className
+  customBgColor?: string; // Custom background color that overrides theme
+  disableGlow?: boolean; // Disable the spotlight/glow animation effect
 }
 
 const glowColorMap = {
@@ -31,12 +33,16 @@ const GlowCard: React.FC<GlowCardProps> = ({
   size = 'md',
   width,
   height,
-  customSize = false
+  customSize = false,
+  customBgColor,
+  disableGlow = false
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (disableGlow) return;
+    
     const syncPointer = (e: PointerEvent) => {
       const { clientX: x, clientY: y } = e;
       
@@ -50,7 +56,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
     document.addEventListener('pointermove', syncPointer);
     return () => document.removeEventListener('pointermove', syncPointer);
-  }, []);
+  }, [disableGlow]);
 
   // Scroll-based animation disabled for mobile/tablet devices
   // Only desktop (pointer devices) will have the spotlight effect
@@ -71,14 +77,14 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--spread': spread,
       '--radius': '16',
       '--border': '2',
-      '--backdrop': 'hsl(0 0% 60% / 0.08)',
+      '--backdrop': customBgColor || 'hsl(0 0% 60% / 0.08)',
       '--backup-border': 'var(--backdrop)',
       '--size': '250',
       '--outer': '0.8',
       '--border-size': 'calc(var(--border, 2) * 1px)',
       '--spotlight-size': 'calc(var(--size, 150) * 1px)',
       '--hue': 'calc(var(--base) + (var(--xp, 0) * var(--spread, 0)))',
-      backgroundImage: `radial-gradient(
+      backgroundImage: customBgColor ? 'none' : `radial-gradient(
         var(--spotlight-size) var(--spotlight-size) at
         calc(var(--x, 0) * 1px)
         calc(var(--y, 0) * 1px),
@@ -158,6 +164,36 @@ const GlowCard: React.FC<GlowCardProps> = ({
       border-width: 10px;
     }
   `;
+
+  if (disableGlow) {
+    return (
+      <div
+        ref={cardRef}
+        style={{
+          backgroundColor: customBgColor || 'hsl(0 0% 60% / 0.08)',
+          position: 'relative' as const,
+          ...(width !== undefined && { width: typeof width === 'number' ? `${width}px` : width }),
+          ...(height !== undefined && { height: typeof height === 'number' ? `${height}px` : height }),
+        }}
+        className={`
+          ${getSizeClasses()}
+          ${!customSize ? 'aspect-[3/4]' : ''}
+          rounded-2xl 
+          relative 
+          grid 
+          grid-rows-[1fr_auto] 
+          shadow-[0_1rem_2rem_-1rem_black] 
+          p-4 
+          gap-4 
+          backdrop-blur-[5px]
+          border-2
+          ${className}
+        `}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <>

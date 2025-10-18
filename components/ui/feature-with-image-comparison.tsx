@@ -9,6 +9,7 @@ import { useScroll } from "framer-motion";
 function Feature() {
   const [inset, setInset] = useState<number>(50);
   const [onMouseDown, setOnMouseDown] = useState<boolean>(false);
+  const [hasReachedEnd, setHasReachedEnd] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -16,17 +17,23 @@ function Feature() {
     offset: ["start center", "end center"]
   });
 
-  // Auto-slide based on scroll - 2x faster animation
+  // Auto-slide based on scroll - fluid animation, stays at end once reached
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      if (!onMouseDown) {
-        // 2x faster: multiply by 200 and clamp to 100
-        const sliderPosition = Math.max(0, Math.min(100, latest * 200));
+      if (!onMouseDown && !hasReachedEnd) {
+        // Smooth fluid animation
+        const sliderPosition = Math.max(0, Math.min(100, latest * 150));
         setInset(sliderPosition);
+        
+        // Once it reaches 100%, lock it there
+        if (sliderPosition >= 99) {
+          setHasReachedEnd(true);
+          setInset(100);
+        }
       }
     });
     return () => unsubscribe();
-  }, [scrollYProgress, onMouseDown]);
+  }, [scrollYProgress, onMouseDown, hasReachedEnd]);
 
   const onMouseMove = (e: React.MouseEvent | React.TouchEvent) => {
     if (!onMouseDown) return;
@@ -45,23 +52,16 @@ function Feature() {
   };
 
   return (
-    <div className="w-full py-12 md:py-20 lg:py-40">
-      {/* Sticky scroll container starts here */}
+    <div className="w-full py-12 md:py-20 lg:py-24">
       <div ref={containerRef} className="relative w-full">
-        {/* Top spacer */}
-        <div className="h-[10vh]" />
-        
-        {/* Sticky image section */}
-        <div className="sticky top-0 min-h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div className="container mx-auto px-4 md:px-6">
             <div className="w-full max-w-5xl mx-auto relative">
               {/* Title Overlay - Always on top */}
-              <div className="absolute -top-36 sm:-top-40 md:-top-48 lg:-top-56 left-0 right-0 z-50 flex flex-col gap-3 md:gap-4 text-center items-center pointer-events-none">
-                <div className="pointer-events-auto">
-                  <Badge>The Difference</Badge>
-                </div>
+              <div className="mb-8 md:mb-12 flex flex-col gap-3 md:gap-4 text-center items-center">
+                <Badge>The Difference</Badge>
                 <div className="flex gap-2 flex-col items-center">
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-ozean text-foreground">
+                  <h2 className="text-3xl md:text-5xl lg:text-7xl font-semibold italic font-newsreader text-foreground">
                     See The Impact
                   </h2>
                   <p className="text-base md:text-lg max-w-2xl leading-relaxed text-muted-foreground px-4">
@@ -153,9 +153,6 @@ function Feature() {
             </div>
           </div>
         </div>
-        
-        {/* Bottom spacer - reduced for 2x faster animation */}
-        <div className="h-[100vh]" />
       </div>
     </div>
   );

@@ -52,15 +52,11 @@ export function FeatureSteps({
   }
 
   return (
-    <div ref={containerRef} className={cn("relative", className)}>
-      {/* Spacer divs to create scroll space for each step */}
-      <div className="h-[10vh]" /> {/* Top spacer - minimal spacing */}
-
-      <div className="sticky top-0 min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12">
-        <div className="max-w-7xl mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-semibold italic font-newsreader mb-6 md:mb-10 text-center">
-            {title}
-          </h2>
+    <div ref={containerRef} className={cn("relative py-12 md:py-20 lg:py-24", className)}>
+      <div className="max-w-7xl mx-auto w-full p-4 md:p-8 lg:p-12">
+        <h2 className="text-3xl md:text-5xl lg:text-7xl font-semibold italic font-newsreader mb-6 md:mb-10 text-center">
+          {title}
+        </h2>
 
           <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
             <div className="order-2 md:order-1 space-y-4 md:space-y-8">
@@ -145,11 +141,7 @@ export function FeatureSteps({
               </div>
             </div>
           </div>
-        </div>
       </div>
-
-      {/* Bottom spacer - creates scroll space for all steps */}
-      <div className="h-[200vh]" />
     </div>
   )
 }

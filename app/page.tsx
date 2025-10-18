@@ -112,7 +112,7 @@ export default function Home() {
       />
       <section className="py-12 px-4 md:py-20 md:px-6 lg:px-12 bg-background">
         <div className="max-w-7xl mx-auto text-center space-y-3 md:space-y-4 mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-ozean">From Seed to Sustainability</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-semibold italic font-newsreader">From Seed to Sustainability</h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Follow the journey from a single seed to a sustainable future, completing nature&apos;s perfect cycle
           </p>

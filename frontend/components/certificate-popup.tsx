@@ -184,19 +184,19 @@ export function CertificatePopup({
 
   return (
     <>
-      {/* Sticky Button - Always visible */}
+      {/* Sticky Button - Always visible - Smaller on mobile/tablet */}
       <motion.button
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2, duration: 0.5 }}
         onClick={handleStickyButtonClick}
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-primary text-primary-foreground px-3 py-6 rounded-l-xl shadow-lg hover:shadow-xl transition-all hover:px-4 group"
+        className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-primary text-primary-foreground px-2 py-4 md:px-3 md:py-6 rounded-l-xl shadow-lg hover:shadow-xl transition-all hover:px-3 md:hover:px-4 group"
         aria-label="Claim Certificate"
       >
-        <div className="flex flex-col items-center gap-2">
-          <Award className="w-5 h-5 rotate-0" />
-          <span className="text-xs font-semibold whitespace-nowrap" style={{ writingMode: 'vertical-rl', transform: 'rotate(0deg)' }}>
-            Get Certificate
+        <div className="flex flex-col items-center gap-1.5 md:gap-2">
+          <Award className="w-4 h-4 md:w-5 md:h-5 rotate-0" />
+          <span className="text-[10px] md:text-xs font-semibold whitespace-nowrap" style={{ writingMode: 'vertical-rl', transform: 'rotate(0deg)' }}>
+            Sustainability Awaiting
           </span>
         </div>
       </motion.button>
@@ -214,13 +214,13 @@ export function CertificatePopup({
             onClick={handleClose}
           />
 
-          {/* Popup */}
+          {/* Popup - Smaller on mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-lg z-50"
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[380px] md:max-w-md lg:max-w-lg z-50"
           >
             <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-2xl overflow-hidden">
               {/* Close Button */}
@@ -233,25 +233,25 @@ export function CertificatePopup({
               </button>
 
               {step === "form" ? (
-                <div className="p-6 md:p-8">
+                <div className="p-4 md:p-6 lg:p-8">
                   {/* Header */}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                      <Award className="w-8 h-8 text-primary" />
+                  <div className="text-center mb-4 md:mb-6">
+                    <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 mb-3 md:mb-4">
+                      <Award className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-semibold italic font-newsreader mb-2">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold italic font-newsreader mb-2">
                       Claim Your Certificate
                     </h2>
-                    <p className="text-sm md:text-base text-muted-foreground">
+                    <p className="text-xs md:text-sm lg:text-base text-muted-foreground">
                       Join the sustainable revolution and get recognized for your interest in bioplastics innovation
                     </p>
                   </div>
 
                   {/* Form */}
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                     {/* Name */}
                     <div>
-                      <label htmlFor="cert-name" className="block text-sm font-medium mb-1.5">
+                      <label htmlFor="cert-name" className="block text-xs md:text-sm font-medium mb-1 md:mb-1.5">
                         Full Name *
                       </label>
                       <input
@@ -259,7 +259,7 @@ export function CertificatePopup({
                         type="text"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+                        className="w-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
                         placeholder="Enter your full name"
                       />
                       {errors.name && (
@@ -269,7 +269,7 @@ export function CertificatePopup({
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="cert-email" className="block text-sm font-medium mb-1.5">
+                      <label htmlFor="cert-email" className="block text-xs md:text-sm font-medium mb-1 md:mb-1.5">
                         Email Address *
                       </label>
                       <input
@@ -277,7 +277,7 @@ export function CertificatePopup({
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+                        className="w-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
                         placeholder="your.email@example.com"
                       />
                       {errors.email && (
@@ -287,7 +287,7 @@ export function CertificatePopup({
 
                     {/* Mobile */}
                     <div>
-                      <label htmlFor="cert-mobile" className="block text-sm font-medium mb-1.5">
+                      <label htmlFor="cert-mobile" className="block text-xs md:text-sm font-medium mb-1 md:mb-1.5">
                         Mobile Number *
                       </label>
                       <input
@@ -295,7 +295,7 @@ export function CertificatePopup({
                         type="tel"
                         value={formData.mobile}
                         onChange={(e) => handleInputChange("mobile", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+                        className="w-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
                         placeholder="9876543210"
                       />
                       {errors.mobile && (
@@ -305,14 +305,14 @@ export function CertificatePopup({
 
                     {/* Field */}
                     <div>
-                      <label htmlFor="cert-field" className="block text-sm font-medium mb-1.5">
+                      <label htmlFor="cert-field" className="block text-xs md:text-sm font-medium mb-1 md:mb-1.5">
                         Field of Work *
                       </label>
                       <select
                         id="cert-field"
                         value={formData.field}
                         onChange={(e) => handleInputChange("field", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30 appearance-none cursor-pointer"
+                        className="w-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base rounded-xl border border-input bg-background text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30 appearance-none cursor-pointer"
                       >
                         <option value="">Select your field</option>
                         <option value="Student">Student</option>
@@ -334,7 +334,7 @@ export function CertificatePopup({
                     <Button
                       type="submit"
                       disabled={loading}
-                      className="w-full h-12 text-base font-semibold"
+                      className="w-full h-10 md:h-12 text-sm md:text-base font-semibold"
                     >
                       {loading ? (
                         <>
@@ -369,44 +369,44 @@ export function CertificatePopup({
                   </form>
 
                   {/* Footer Note */}
-                  <p className="text-xs text-muted-foreground text-center mt-4">
+                  <p className="text-[10px] md:text-xs text-muted-foreground text-center mt-3 md:mt-4">
                     Your information will be securely stored and used only for certificate generation
                   </p>
                 </div>
               ) : (
-                <div className="p-6 md:p-8">
+                <div className="p-4 md:p-6 lg:p-8">
                   {/* Success Header */}
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-4 md:mb-6">
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", delay: 0.2 }}
-                      className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 mb-4"
+                      className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-500/10 mb-3 md:mb-4"
                     >
-                      <CheckCircle2 className="w-8 h-8 text-green-500" />
+                      <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8 text-green-500" />
                     </motion.div>
-                    <h2 className="text-2xl md:text-3xl font-semibold italic font-newsreader mb-2">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold italic font-newsreader mb-2">
                       Congratulations, {formData.name.split(" ")[0]}!
                     </h2>
-                    <p className="text-sm md:text-base text-muted-foreground">
+                    <p className="text-xs md:text-sm lg:text-base text-muted-foreground">
                       Your certificate is ready to download
                     </p>
                   </div>
 
                   {/* Certificate Preview */}
-                  <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 mb-6 border border-primary/20">
-                    <div className="flex items-center gap-4">
+                  <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-4 md:p-6 mb-4 md:mb-6 border border-primary/20">
+                    <div className="flex items-center gap-3 md:gap-4">
                       <div className="flex-shrink-0">
-                        <Award className="w-12 h-12 text-primary" />
+                        <Award className="w-8 h-8 md:w-12 md:h-12 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-lg mb-1">
+                        <h3 className="font-semibold text-base md:text-lg mb-1">
                           Certificate of Recognition
                         </h3>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs md:text-sm text-muted-foreground">
                           Issued to <strong>{formData.name}</strong>
                         </p>
-                        <p className="text-xs text-muted-foreground mt-1">
+                        <p className="text-[10px] md:text-xs text-muted-foreground mt-1">
                           For showing interest in sustainable bioplastics innovation
                         </p>
                       </div>
@@ -414,27 +414,27 @@ export function CertificatePopup({
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 md:space-y-3">
                     <Button
                       onClick={handleDownload}
-                      className="w-full h-12 text-base font-semibold"
+                      className="w-full h-10 md:h-12 text-sm md:text-base font-semibold"
                     >
-                      <Download className="w-5 h-5 mr-2" />
+                      <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                       Download Certificate
                     </Button>
 
                     <Button
                       onClick={handleLinkedInShare}
                       variant="outline"
-                      className="w-full h-12 text-base font-semibold"
+                      className="w-full h-10 md:h-12 text-sm md:text-base font-semibold"
                     >
-                      <Linkedin className="w-5 h-5 mr-2" />
+                      <Linkedin className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                       Share on LinkedIn
                     </Button>
                   </div>
 
                   {/* Footer Note */}
-                  <p className="text-xs text-muted-foreground text-center mt-4">
+                  <p className="text-[10px] md:text-xs text-muted-foreground text-center mt-3 md:mt-4">
                     Thank you for being part of the sustainable revolution! 🌱
                   </p>
                 </div>

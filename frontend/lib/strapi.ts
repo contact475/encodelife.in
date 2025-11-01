@@ -6,7 +6,7 @@
  */
 
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN;
+const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN || process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 
 interface FetchOptions extends RequestInit {
   headers?: HeadersInit;
@@ -20,7 +20,7 @@ export async function fetchAPI(endpoint: string, options: FetchOptions = {}) {
     'Content-Type': 'application/json',
   };
 
-  // Add authorization token if available (for server-side requests)
+  // Add authorization token (required for Strapi 5)
   if (STRAPI_API_TOKEN) {
     defaultHeaders['Authorization'] = `Bearer ${STRAPI_API_TOKEN}`;
   }

@@ -44,11 +44,10 @@ export function CertificatePopup({
       return; // Don't show popup automatically if already completed
     }
 
-    let timeoutId: NodeJS.Timeout;
     let hasScrolled = false;
 
     // Show after delay (only if not completed)
-    timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       if (!hasScrolled && !hasShown) {
         setIsOpen(true);
         setHasShown(true);

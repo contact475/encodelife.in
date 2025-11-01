@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
-
-// TODO: Import database client when ready
-// import { db } from '@/lib/db';
+import { supabase } from '@/lib/supabase';
 
 export async function POST(request: Request) {
     try {
@@ -34,44 +32,69 @@ export async function POST(request: Request) {
             );
         }
 
-        // TODO: Store in database
-        // Example database insertion (uncomment when database is set up):
-        /*
-        const certificateClaim = await db.certificateClaims.create({
-            data: {
+        // Generate certificate ID
+        const year = new Date().getFullYear();
+        
+        // Get next sequence number
+        const { data: lastCert } = await supabase
+            .from('certificate_numbers')
+            .select('sequence_number')
+            .eq('year', year)
+            .order('sequence_number', { ascending: false })
+            .limit(1)
+            .single();
+
+        const nextSequence = (lastCert?.sequence_number || 0) + 1;
+        const certificateId = `EL-${year}-${String(nextSequence).padStart(4, '0')}`;
+
+        // Insert certificate number
+        await supabase
+            .from('certificate_numbers')
+            .insert({
+                year,
+                sequence_number: nextSequence,
+                certificate_id: certificateId
+            });
+
+        // Store certificate claim
+        const { data: claim, error: claimError } = await supabase
+            .from('certificate_claims')
+            .insert({
+                certificate_id: certificateId,
                 name,
                 email,
                 mobile,
-                field,
-                claimedAt: new Date(),
-                certificateId: generateCertificateId(), // Generate unique ID
-            },
-        });
-        */
+                field_of_work: field,
+                status: 'pending'
+            })
+            .select()
+            .single();
 
-        // For now, just log the data
-        console.log('Certificate claim received:', {
-            name,
-            email,
-            mobile,
-            field,
-            timestamp: new Date().toISOString(),
-        });
+        if (claimError) {
+            console.error('Database error:', claimError);
+            return NextResponse.json(
+                { error: 'Failed to save certificate claim' },
+                { status: 500 }
+            );
+        }
 
-        // TODO: Send confirmation email
-        /*
-        await sendCertificateEmail({
-            to: email,
-            name,
-            certificateUrl: `${process.env.NEXT_PUBLIC_URL}/certificates/${certificateClaim.certificateId}`,
-        });
-        */
+        // Also store in user_details for unified tracking
+        await supabase
+            .from('user_details')
+            .insert({
+                name,
+                email,
+                mobile,
+                source: 'certificate',
+                field_of_work: field
+            });
 
         return NextResponse.json(
             {
                 success: true,
                 message: 'Certificate claim recorded successfully',
-                // certificateId: certificateClaim.certificateId, // Uncomment when DB is ready
+                certificateId: certificateId,
+                data: claim
             },
             { status: 200 }
         );

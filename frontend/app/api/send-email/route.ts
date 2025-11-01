@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { supabase } from '@/lib/supabase';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -15,6 +16,36 @@ export async function POST(request: Request) {
                 { status: 400 }
             );
         }
+
+        // Store in Supabase database
+        const { error: dbError } = await supabase
+            .from('contact_form_submissions')
+            .insert({
+                name,
+                email,
+                mobile: phone,
+                company,
+                reason,
+                message,
+                status: 'new'
+            });
+
+        if (dbError) {
+            console.error('Database error:', dbError);
+            // Continue with email even if DB fails
+        }
+
+        // Also store in user_details for unified tracking
+        await supabase
+            .from('user_details')
+            .insert({
+                name,
+                email,
+                mobile: phone,
+                source: 'contact_form',
+                reason,
+                message
+            });
 
         // Send email using Resend
         const { data, error } = await resend.emails.send({

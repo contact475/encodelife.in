@@ -41,6 +41,12 @@
     },
     "responsibilities": {
       "type": "richtext"
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-application.job-application",
+      "mappedBy": "job_position"
     }
   }
 }

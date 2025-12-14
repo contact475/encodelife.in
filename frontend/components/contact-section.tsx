@@ -33,8 +33,8 @@ const methods = [
   {
     icon: FiPhone,
     title: "Call us",
-    lines: ["+91 9711243043", "+91 70000 17005"],
-    href: "tel:+919711243043",
+    lines: ["+91 9873156938", "+91 70000 17005"],
+    href: "tel:+919873156938",
   },
   {
     icon: FiMail,

@@ -39,8 +39,8 @@ export default function Footer() {
             <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Call Us</p>
             <ul className="mt-2 space-y-1.5 md:space-y-2">
               <li>
-                <Link href="tel:+919711243043" className="hover:text-green-500 transition">
-                  +91 9711243043
+                <Link href="tel:+919873156938" className="hover:text-green-500 transition">
+                  +91 9873156938
                 </Link>
               </li>
               <li>

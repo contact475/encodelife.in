@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X, Moon, Sun, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, Moon, Sun, ChevronDown, ChevronRight, Linkedin, Phone, Mail } from "lucide-react";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -100,7 +100,7 @@ const EncodeLifeHeader = () => {
 
             {/* Mobile Menu */}
             <div className={cn(
-              "absolute top-full left-0 right-0 mt-3 mx-3 bg-background/98 backdrop-blur-2xl border border-border/50 rounded-2xl shadow-2xl shadow-black/20 lg:hidden transition-all duration-300 max-h-[80vh] overflow-y-auto",
+              "absolute top-full left-0 right-0 mt-3 mx-3 bg-card border border-border rounded-2xl shadow-2xl shadow-black/20 lg:hidden transition-all duration-300 max-h-[80vh] overflow-y-auto",
               menuState ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
             )}>
               <div className="p-6">
@@ -307,6 +307,50 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             </a>
           </Button>
         </div>
+      </div>
+
+      {/* Footer Section */}
+      <div className="mt-6 pt-6 border-t border-border/50 space-y-4">
+        {/* Contact Info */}
+        <div className="space-y-3">
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <Phone className="h-4 w-4" />
+            <a href="tel:+919711243043" className="hover:text-primary transition-colors">
+              +91 9711243043
+            </a>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <Phone className="h-4 w-4" />
+            <a href="tel:+917000017005" className="hover:text-primary transition-colors">
+              +91 70000 17005
+            </a>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:contact@encodelife.in" className="hover:text-primary transition-colors">
+              contact@encodelife.in
+            </a>
+          </div>
+        </div>
+
+        {/* Social Media */}
+        <div className="flex items-center gap-4 pt-2">
+          <a
+            href="https://www.linkedin.com/company/encode-life/"
+            target="_blank"
+            rel="noreferrer"
+            onClick={onClose}
+            className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-200"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <p className="text-xs text-muted-foreground">
+          © 2025 <span className="font-semibold text-foreground">Encode Life</span>. All rights reserved.
+        </p>
       </div>
     </div>
   );

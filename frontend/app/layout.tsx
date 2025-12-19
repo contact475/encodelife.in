@@ -67,6 +67,7 @@ export default function RootLayout({
         >
           <ThemedClickSpark>
             {children}
+            <Footer />
           </ThemedClickSpark>
         </ThemeProvider>
       </body>

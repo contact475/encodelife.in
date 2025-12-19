@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getAllBlogPosts } from "@/lib/blog";
+import { EncodeLifeHeader } from "@/components/encode-life-header";
 
 const formatDate = (date: string): string => {
   return new Date(date).toLocaleDateString("en-US", {
@@ -16,7 +17,9 @@ export default function BlogPage() {
   const sortedBlogs = getAllBlogPosts();
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <EncodeLifeHeader />
+      <div className="min-h-screen bg-background pt-20">
       {/* Header */}
       <div className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-8">
@@ -79,5 +82,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

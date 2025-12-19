@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/hero-section-5";
+import { EncodeLifeHeader } from "@/components/encode-life-header";
 import { FeaturesSectionWithHoverEffects } from "@/components/feature-section-with-hover-effects";
 import { FeatureSteps } from "@/components/feature-section";
 import { ZoomParallax } from "@/components/zoom-parallax";
@@ -8,30 +9,32 @@ import { CollaboratorsSection } from "@/components/collaborators-section";
 import Contact2 from "@/components/contact-section";
 import { CertificatePopup } from "@/components/certificate-popup";
 
+import { CompanyTestimonialsSection } from "@/components/company-testimonials-section";
+
 export default function Home() {
   const features = [
     {
       step: "Step 1",
-      title: "Carbon Absorption",
-      content: "PLA production starts with corn, which naturally absorbs CO₂ from the atmosphere during growth.",
+      title: "Renewable Feedstock",
+      content: "Supporting Indian farmers through corn procurement, creating rural employment and sustainable agriculture.",
       image: "/pla-journey-1.webp",
     },
     {
       step: "Step 2",
-      title: "Sustainable Harvesting",
-      content: "Only 1.75 m² of land needed per kg of PLA, ensuring efficient and sustainable land utilization.",
+      title: "Job Creation & Manufacturing",
+      content: "Creating 500+ skilled jobs for freshers in India's first corn-based biopolymer plant, integrated with renewable energy and energy storage systems.",
       image: "/pla-journey-2.webp",
     },
     {
       step: "Step 3",
-      title: "PLA Manufacturing",
-      content: "State-of-the-art production powered by 100% renewable energy in India's first industrial-scale plant.",
+      title: "Special PLA Blends",
+      content: "Developing 10+ specialized formulations through industry-academia collaboration for diverse applications.",
       image: "/pla-journey-3.webp",
     },
     {
       step: "Step 4",
-      title: "Circular Economy",
-      content: "PLA products decompose naturally or can be recycled, completing the earth-to-earth cycle with minimal emissions.",
+      title: "End-of-Life Solutions",
+      content: "Comprehensive recycling, composting, and biogas conversion ensuring zero waste and complete circularity.",
       image: "/pla-journey-4.webp",
     },
   ];
@@ -70,41 +73,42 @@ export default function Home() {
   const blogPosts = [
     {
       id: "post-1",
-      title: "The Future of Sustainable Packaging",
+      title: "Creating 500+ Jobs in India's Biotech Sector",
       summary:
-        "Discover how PLA bioplastics are revolutionizing the packaging industry with eco-friendly alternatives that reduce carbon footprint and plastic waste.",
-      label: "Sustainability",
+        "How Encode Life is empowering freshers with skilled employment opportunities in biotechnology, chemical engineering, and sustainable manufacturing.",
+      label: "Job Creation",
       author: "Dr. Priya Sharma",
       published: "15 Dec 2024",
-      url: "/blog/future-of-sustainable-packaging",
+      url: "/blog/creating-jobs-biotech-sector",
       image: "/image5.webp",
     },
     {
       id: "post-2",
-      title: "From Corn to Bioplastic: The PLA Journey",
+      title: "Special PLA Blends: Innovation Through Collaboration",
       summary:
-        "Explore the fascinating process of transforming corn into high-quality PLA bioplastics and how it's creating a circular economy.",
+        "Discover how our partnerships with IIT Guwahati and INST Mohali are developing 10+ specialized PLA formulations for diverse industries.",
       label: "Innovation",
       author: "Rajesh Kumar",
       published: "10 Dec 2024",
-      url: "/blog/corn-to-bioplastic-journey",
+      url: "/blog/special-pla-blends-innovation",
       image: "/image3.webp",
     },
     {
       id: "post-3",
-      title: "Why India is Leading the Bioplastics Revolution",
+      title: "Complete End-of-Life Solutions for PLA",
       summary:
-        "Learn about India's first industrial-scale PLA plant and how it's positioning the country as a global leader in sustainable materials.",
-      label: "Industry",
+        "Learn about our comprehensive approach to circular economy through composting, recycling, and biogas conversion—ensuring zero waste.",
+      label: "Sustainability",
       author: "Ananya Desai",
       published: "5 Dec 2024",
-      url: "/blog/india-leading-bioplastics-revolution",
+      url: "/blog/end-of-life-solutions-pla",
       image: "/image2.webp",
     },
   ];
 
   return (
     <>
+      <EncodeLifeHeader />
       <HeroSection />
       <FeaturesSectionWithHoverEffects />
       <FeatureSteps
@@ -120,6 +124,7 @@ export default function Home() {
         </div>
       </section>
       <ZoomParallax images={parallaxImages} />
+
       <Feature />
       <Blog7
         tagline="Latest Updates"
@@ -129,6 +134,7 @@ export default function Home() {
         buttonUrl="/blog"
         posts={blogPosts}
       />
+      <CompanyTestimonialsSection />
       <CollaboratorsSection />
       <Contact2 />
       

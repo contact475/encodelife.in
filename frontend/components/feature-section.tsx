@@ -30,17 +30,21 @@ export function FeatureSteps({
     offset: ["start start", "end end"]
   })
 
-  // Map scroll progress to feature index - only when section is in view
+  // Map scroll progress to feature index - smoother transitions
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      // Only progress when scroll is between 0.1 and 0.9 (section is fully visible)
-      if (latest >= 0.1 && latest <= 0.9) {
-        const adjustedProgress = (latest - 0.1) / 0.8 // Normalize to 0-1
+      // Extended range for smoother transitions (0.05 to 0.95)
+      if (latest >= 0.05 && latest <= 0.95) {
+        const adjustedProgress = (latest - 0.05) / 0.9 // Normalize to 0-1
         const featureIndex = Math.min(
           Math.floor(adjustedProgress * features.length),
           features.length - 1
         )
         setCurrentFeature(Math.max(0, featureIndex))
+      } else if (latest < 0.05) {
+        setCurrentFeature(0)
+      } else if (latest > 0.95) {
+        setCurrentFeature(features.length - 1)
       }
     })
 

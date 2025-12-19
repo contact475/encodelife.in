@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { Building2, Factory } from "lucide-react";
-import { PageHeader } from "@/components/page-header";
+import { EncodeLifeHeader } from "@/components/encode-life-header";
+
 
 // Reuse the contact form hook
 function useContactSubmit() {
@@ -83,9 +84,8 @@ export default function ContactPageContent() {
     }, []);
 
     return (
-        <>
-            <PageHeader />
-            <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background">
+                <EncodeLifeHeader />
                 {/* Hero Section */}
                 <section className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
                     <div className="absolute inset-0">
@@ -507,7 +507,6 @@ export default function ContactPageContent() {
                         </div>
                     </motion.div>
                 </section>
-            </div>
-        </>
+        </div>
     );
 }

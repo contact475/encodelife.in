@@ -30,13 +30,13 @@ const ozean = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Encode Life - Sustainable Bioplastics | India's First PLA Plant",
-  description: "India's first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics, powered by 100% renewable energy. Creating a circular economy for a greener tomorrow.",
-  keywords: ["PLA", "bioplastics", "sustainable", "renewable energy", "circular economy", "corn", "India", "Encode Life"],
+  title: "Encode Life - Empowering India's Biotech Sector | 500+ Jobs | Special PLA Blends",
+  description: "India's first industrial-scale PLA plant creating 500+ jobs for freshers. Developing special PLA blends through industry collaboration with complete end-of-life solutions for circular economy.",
+  keywords: ["PLA", "bioplastics", "biotechnology jobs", "freshers jobs", "industry collaboration", "special PLA blends", "end-of-life solutions", "circular economy", "IIT Guwahati", "INST Mohali", "India", "Encode Life"],
   authors: [{ name: "Encode Life" }],
   openGraph: {
-    title: "Encode Life - Sustainable Bioplastics",
-    description: "India's first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics.",
+    title: "Encode Life - Empowering India's Biotech Sector",
+    description: "Creating 500+ jobs, developing special PLA blends, and pioneering end-of-life solutions for sustainable future.",
     url: "https://encodelife.in",
     siteName: "Encode Life",
     locale: "en_US",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Encode Life - Sustainable Bioplastics",
-    description: "India's first industrial-scale PLA biopolymer plant",
+    title: "Encode Life - Empowering India's Biotech Sector",
+    description: "Creating 500+ jobs and developing special PLA blends with complete end-of-life solutions",
   },
 };
 
@@ -67,7 +67,6 @@ export default function RootLayout({
         >
           <ThemedClickSpark>
             {children}
-            <Footer />
           </ThemedClickSpark>
         </ThemeProvider>
       </body>

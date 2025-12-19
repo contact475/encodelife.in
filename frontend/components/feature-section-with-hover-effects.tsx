@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import {
   IconLeaf,
   IconRecycle,
@@ -31,43 +30,43 @@ export function FeaturesSectionWithHoverEffects() {
           {/* Text content - Shows second on mobile, first on desktop */}
           <div className="space-y-4 md:space-y-6 md:order-1">
             <p className="text-lg md:text-2xl lg:text-3xl font-medium text-foreground leading-relaxed">
-              Encode Life is a new-age biotechnology company pioneering sustainable materials and processes 
-              to replace traditional fossil fuel-derived products for a greener future.
+              Encode Life is empowering India&apos;s biotechnology sector through sustainable innovation, 
+              creating direct employment opportunities for freshers, and fostering industry-academia collaboration.
             </p>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              We are establishing India&apos;s first industrial-scale biopolymer plant, transforming renewable corn 
-              into sustainable PLA bioplastics. Our bio-based materials naturally absorb CO₂ during growth and are 
-              powered entirely by 100% renewable energy.
+              We are establishing India&apos;s first industrial-scale PLA biopolymer plant, generating hundreds 
+              of skilled jobs while transforming renewable corn into sustainable bioplastics. Our focus on 
+              end-of-life solutions and special PLA blends positions us at the forefront of circular economy innovation.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Through innovation in biomaterials, we produce compostable and recyclable plastics that support 
-              a true circular economy—achieving carbon neutrality while setting new global benchmarks for 
-              environmental responsibility.
+              Through strategic partnerships with leading research institutions like IIT Guwahati and INST Mohali, 
+              we&apos;re bridging the gap between academia and industry, creating opportunities for fresh talent 
+              while developing cutting-edge biomaterials for a sustainable future.
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 md:gap-3 pt-2 md:pt-4">
               <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border hover:border-green-500/50 transition-colors">
                 <IconLeaf className="w-3.5 h-3.5 md:w-4 md:h-4 text-muted-foreground" />
-                <span className="text-xs md:text-sm font-medium">Sustainability</span>
+                <span className="text-xs md:text-sm font-medium">Job Creation</span>
               </div>
               <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border hover:border-green-500/50 transition-colors">
                 <IconRecycle className="w-3.5 h-3.5 md:w-4 md:h-4 text-muted-foreground" />
-                <span className="text-xs md:text-sm font-medium">Circular Economy</span>
+                <span className="text-xs md:text-sm font-medium">Industry Collaboration</span>
               </div>
               <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border hover:border-green-500/50 transition-colors">
                 <IconTrendingDown className="w-3.5 h-3.5 md:w-4 md:h-4 text-muted-foreground" />
-                <span className="text-xs md:text-sm font-medium">Carbon Neutrality</span>
+                <span className="text-xs md:text-sm font-medium">End-of-Life Solutions</span>
               </div>
               <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border hover:border-green-500/50 transition-colors">
                 <IconPlant className="w-3.5 h-3.5 md:w-4 md:h-4 text-muted-foreground" />
-                <span className="text-xs md:text-sm font-medium">Biomaterials</span>
+                <span className="text-xs md:text-sm font-medium">Special PLA Blends</span>
               </div>
               <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border hover:border-green-500/50 transition-colors">
                 <IconCertificate className="w-3.5 h-3.5 md:w-4 md:h-4 text-muted-foreground" />
-                <span className="text-xs md:text-sm font-medium">Innovation</span>
+                <span className="text-xs md:text-sm font-medium">Biotech Innovation</span>
               </div>
             </div>
           </div>
@@ -76,20 +75,20 @@ export function FeaturesSectionWithHoverEffects() {
         {/* Key stats below */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 md:mt-16">
           <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">0.5kg</div>
-            <div className="text-xs md:text-sm text-muted-foreground">CO₂ per kg PLA</div>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">500+</div>
+            <div className="text-xs md:text-sm text-muted-foreground">Direct Jobs Created</div>
+          </div>
+          <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">5+</div>
+            <div className="text-xs md:text-sm text-muted-foreground">Research Collaborations</div>
+          </div>
+          <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">10+</div>
+            <div className="text-xs md:text-sm text-muted-foreground">Special PLA Blends</div>
           </div>
           <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
             <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">100%</div>
-            <div className="text-xs md:text-sm text-muted-foreground">Renewable Energy</div>
-          </div>
-          <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">1.75m²</div>
-            <div className="text-xs md:text-sm text-muted-foreground">Land per kg</div>
-          </div>
-          <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">80K</div>
-            <div className="text-xs md:text-sm text-muted-foreground">t/a Capacity</div>
+            <div className="text-xs md:text-sm text-muted-foreground">End-of-Life Solutions</div>
           </div>
         </div>
       </div>

@@ -10,6 +10,10 @@ import { useScroll, motion } from 'motion/react'
 const menuItems = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/#about' },
+    { name: 'PLA', href: '/pla' },
+    { name: 'Products', href: '/products' },
+    { name: 'Collaborations', href: '/collaborations' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact Us', href: '/contact' },
 ]

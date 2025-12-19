@@ -17,12 +17,17 @@ function Feature() {
     offset: ["start center", "end center"]
   });
 
-  // Auto-slide based on scroll - fluid animation, stays at end once reached
+  // Auto-slide based on scroll - much smoother and slower animation
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       if (!onMouseDown && !hasReachedEnd) {
-        // Smooth fluid animation
-        const sliderPosition = Math.max(0, Math.min(100, latest * 150));
+        // Much slower, smoother animation - only moves 0-100% over the scroll range
+        // Eased curve for natural feel
+        const easedProgress = latest < 0.5 
+          ? 2 * latest * latest 
+          : 1 - Math.pow(-2 * latest + 2, 2) / 2;
+        
+        const sliderPosition = Math.max(0, Math.min(100, easedProgress * 100));
         setInset(sliderPosition);
         
         // Once it reaches 100%, lock it there

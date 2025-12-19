@@ -44,9 +44,15 @@ export function CertificatePopup({
       return; // Don't show popup automatically if already completed
     }
 
+    // Check if user has dismissed the popup before (closed it)
+    const hasDismissed = localStorage.getItem("certificate-popup-dismissed");
+    if (hasDismissed === "true") {
+      return; // Don't show popup automatically if user has dismissed it before
+    }
+
     let hasScrolled = false;
 
-    // Show after delay (only if not completed)
+    // Show after delay (only if not completed and not dismissed)
     const timeoutId = setTimeout(() => {
       if (!hasScrolled && !hasShown) {
         setIsOpen(true);
@@ -54,7 +60,7 @@ export function CertificatePopup({
       }
     }, delay);
 
-    // Show after scroll (only if not completed)
+    // Show after scroll (only if not completed and not dismissed)
     const handleScroll = () => {
       if (window.scrollY > scrollThreshold && !hasShown) {
         hasScrolled = true;
@@ -154,6 +160,8 @@ export function CertificatePopup({
     setIsOpen(false);
     // Re-enable scrolling
     document.body.style.overflow = 'unset';
+    // Mark as dismissed so it won't popup again automatically
+    localStorage.setItem("certificate-popup-dismissed", "true");
   };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
@@ -179,7 +187,13 @@ export function CertificatePopup({
 
   const handleStickyButtonClick = () => {
     setIsOpen(true);
-    setStep("form"); // Always start with form
+    // If user has already completed the form, show certificate step
+    // Otherwise show the form
+    if (isCompleted) {
+      setStep("certificate");
+    } else {
+      setStep("form");
+    }
   };
 
   return (

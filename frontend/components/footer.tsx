@@ -12,11 +12,16 @@ export default function Footer() {
           <span className="text-lg md:text-xl font-bold text-black dark:text-white">Encode Life</span>
         </Link>
 
-        {/* Two columns on mobile, horizontal on desktop */}
-        <div className="grid grid-cols-2 md:flex md:flex-row gap-6 md:gap-10 lg:gap-[60px] xl:gap-[140px]">
+        {/* Three columns on mobile, horizontal on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16">
           <div className="text-left md:text-left">
-            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Quick Links</p>
+            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Company</p>
             <ul className="mt-2 space-y-1.5 md:space-y-2">
+              <li>
+                <Link href="/" className="hover:text-green-500 transition">
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link href="/#about" className="hover:text-green-500 transition">
                   About Us
@@ -36,7 +41,33 @@ export default function Footer() {
           </div>
 
           <div className="text-left md:text-left">
-            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Call Us</p>
+            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Solutions</p>
+            <ul className="mt-2 space-y-1.5 md:space-y-2">
+              <li>
+                <Link href="/pla" className="hover:text-green-500 transition">
+                  PLA Technology
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="hover:text-green-500 transition">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/circularity" className="hover:text-green-500 transition">
+                  Circularity
+                </Link>
+              </li>
+              <li>
+                <Link href="/collaborations" className="hover:text-green-500 transition">
+                  Collaborations
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-left md:text-left col-span-2 md:col-span-1">
+            <p className="text-slate-900 dark:text-slate-100 font-semibold text-sm md:text-base">Get in Touch</p>
             <ul className="mt-2 space-y-1.5 md:space-y-2">
               <li>
                 <Link href="tel:+919711243043" className="hover:text-green-500 transition">

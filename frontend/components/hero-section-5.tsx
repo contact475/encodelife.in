@@ -20,7 +20,6 @@ export function HeroSection() {
 
     return (
         <>
-            <HeroHeader />
             <main className="overflow-x-hidden">
                 <section className="relative w-full">
                     <div className="relative w-full min-h-[600px] md:min-h-[700px] lg:aspect-video">
@@ -33,10 +32,10 @@ export function HeroSection() {
                                 className="size-full object-cover"
                                 src="https://cdn.pixabay.com/video/2020/02/17/32479-392186775_large.mp4"></video>
                         </div>
-                        <div className="relative z-10 flex items-center justify-center h-full min-h-[600px] md:min-h-[500px] lg:min-h-0 px-6 lg:px-12">
+                        <div className="relative z-10 flex items-center justify-center h-full min-h-[600px] md:min-h-[500px] lg:min-h-0 px-6 lg:px-12 pt-20">
                             <div className="mx-auto max-w-7xl w-full text-center lg:text-left pt-20 md:pt-0">
-                                <h1 className="max-w-3xl mx-auto lg:mx-0 text-balance text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-white font-bold leading-tight">The Era of Bio Circularity</h1>
-                                <p className="mt-6 md:mt-8 max-w-2xl mx-auto lg:mx-0 text-balance text-base sm:text-lg md:text-xl text-white/90">India&apos;s first industrial-scale PLA biopolymer plant. Transforming corn into sustainable bioplastics, powered by 100% renewable energy.</p>
+                                <h1 className="max-w-3xl mx-auto lg:mx-0 text-balance text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-white font-bold leading-tight">Empowering India&apos;s Biotech Future</h1>
+                                <p className="mt-6 md:mt-8 max-w-2xl mx-auto lg:mx-0 text-balance text-base sm:text-lg md:text-xl text-white/90">Creating jobs, fostering innovation, and building sustainable solutions. India&apos;s first industrial-scale PLA plant transforming biotechnology through special blends and circular economy.</p>
 
                                 <div className="mt-8 md:mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
                                     <Button
@@ -76,117 +75,7 @@ export function HeroSection() {
     )
 }
 
-const menuItems = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact Us', href: '/contact' },
-]
 
-const HeroHeader = () => {
-    const [menuState, setMenuState] = React.useState(false)
-    const [scrolled, setScrolled] = React.useState(false)
-    const { scrollYProgress } = useScroll()
-
-    React.useEffect(() => {
-        const unsubscribe = scrollYProgress.on('change', (latest) => {
-            setScrolled(latest > 0.05)
-        })
-        return () => unsubscribe()
-    }, [scrollYProgress])
-
-    // Close menu when clicking on a link
-    const handleLinkClick = () => {
-        setMenuState(false)
-    }
-
-    return (
-        <header>
-            <nav
-                data-state={menuState && 'active'}
-                className="group fixed z-20 w-full pt-2">
-                <div className={cn('mx-auto max-w-7xl rounded-3xl px-4 sm:px-6 transition-all duration-300 lg:px-12', scrolled && 'bg-background/50 backdrop-blur-2xl')}>
-                    <motion.div
-                        key={1}
-                        className={cn('relative flex flex-wrap items-center justify-between gap-6 py-3 duration-200 lg:gap-0 lg:py-6', scrolled && 'lg:py-4')}>
-                        <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
-                            <Link
-                                href="/"
-                                aria-label="home"
-                                className="flex items-center space-x-2 sm:space-x-3">
-                                <img src="/logo.png" alt="Encode Life Logo" className="h-7 sm:h-8 w-auto" />
-                                <span className={cn("text-lg sm:text-xl font-bold transition-colors duration-300", scrolled ? "text-foreground" : "text-black dark:text-white lg:text-white")}>Encode Life</span>
-                            </Link>
-
-                            <button
-                                onClick={() => setMenuState(!menuState)}
-                                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                <Menu className={cn("group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200 transition-colors", scrolled ? "text-foreground" : "text-black dark:text-white")} />
-                                <X className={cn("group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 transition-colors", scrolled ? "text-foreground" : "text-black dark:text-white")} />
-                            </button>
-
-                            <div className="hidden lg:block">
-                                <ul className="flex gap-8 text-sm">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                className={cn("block duration-150 transition-colors", scrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white")}>
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-                            <div className="lg:hidden">
-                                <ul className="space-y-6 text-base">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                onClick={handleLinkClick}
-                                                className="text-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            
-                            {/* Mobile Theme Toggle Section - Redesigned */}
-                            <div className="w-full lg:hidden pt-4 border-t border-border">
-                                <div className="flex items-center justify-between">
-                                    <span className="text-sm font-medium text-foreground">Appearance</span>
-                                    <ThemeToggle />
-                                </div>
-                            </div>
-
-                            {/* Desktop Theme Toggle */}
-                            <div className="hidden lg:flex lg:gap-6">
-                                <ThemeToggle />
-                            </div>
-
-                            {/* Contact Button */}
-                            <div className="w-full lg:w-auto">
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className="w-full lg:w-auto">
-                                    <Link href="/contact">
-                                        <span>Contact Us</span>
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </nav>
-        </header>
-    )
-}
 
 const Logo = ({ className }: { className?: string }) => {
     return (

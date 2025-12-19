@@ -1,4 +1,5 @@
 import ContactPageContent from "@/components/contact-page-content";
+import { EncodeLifeHeader } from "@/components/encode-life-header";
 
 export const metadata = {
   title: "Contact Us - Encode Life | Get in Touch",
@@ -6,5 +7,10 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactPageContent />;
+  return (
+    <>
+      <EncodeLifeHeader />
+      <ContactPageContent />
+    </>
+  );
 }

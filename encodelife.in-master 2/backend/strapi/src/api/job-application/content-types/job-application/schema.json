@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_applications",
+  "info": {
+    "singularName": "job-application",
+    "pluralName": "job-applications",
+    "displayName": "Job Application",
+    "description": "Job applications from candidates"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "job_position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::career.career",
+      "inversedBy": "applications"
+    },
+    "job_title": {
+      "type": "string",
+      "required": true
+    },
+    "resume": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["files"]
+    },
+    "cover_letter": {
+      "type": "text"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "portfolio_url": {
+      "type": "string"
+    },
+    "years_of_experience": {
+      "type": "integer"
+    },
+    "current_location": {
+      "type": "string"
+    },
+    "expected_salary": {
+      "type": "string"
+    },
+    "notice_period": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "reviewing",
+        "shortlisted",
+        "interview_scheduled",
+        "rejected",
+        "hired"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "applied_at": {
+      "type": "datetime"
+    }
+  }
+}

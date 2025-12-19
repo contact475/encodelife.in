@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "tw-animate-css";
-
 @keyframes glow {
   0% {
     background-position: 0% 50%;

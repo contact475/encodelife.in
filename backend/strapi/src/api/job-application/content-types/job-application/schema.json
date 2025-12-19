@@ -5,16 +5,17 @@
     "singularName": "job-application",
     "pluralName": "job-applications",
     "displayName": "Job Application",
-    "description": "Job applications from candidates"
+    "description": "Job applications submitted by candidates"
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "full_name": {
+    "fullName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 100
     },
     "email": {
       "type": "email",
@@ -22,62 +23,93 @@
     },
     "phone": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 20
     },
-    "job_position": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::career.career",
-      "inversedBy": "applications"
+    "location": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
     },
-    "job_title": {
+    "jobId": {
       "type": "string",
       "required": true
     },
-    "resume": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["files"]
+    "jobTitle": {
+      "type": "string",
+      "required": true
     },
-    "cover_letter": {
+    "experience": {
+      "type": "enumeration",
+      "enum": ["Entry-Level (0-1 years)", "Mid-Level (2-4 years)", "Senior (5+ years)"],
+      "required": true
+    },
+    "currentRole": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "skills": {
       "type": "text"
     },
-    "linkedin_url": {
+    "resumeLink": {
+      "type": "string",
+      "required": true
+    },
+    "portfolioLink": {
       "type": "string"
     },
-    "portfolio_url": {
-      "type": "string"
+    "coverLetter": {
+      "type": "text"
     },
-    "years_of_experience": {
-      "type": "integer"
-    },
-    "current_location": {
-      "type": "string"
-    },
-    "expected_salary": {
-      "type": "string"
-    },
-    "notice_period": {
-      "type": "string"
-    },
-    "status": {
+    "applicationStatus": {
       "type": "enumeration",
       "enum": [
-        "new",
-        "reviewing",
-        "shortlisted",
+        "submitted",
+        "under_review",
         "interview_scheduled",
+        "interview_completed",
+        "selected",
         "rejected",
-        "hired"
+        "withdrawn"
       ],
-      "default": "new"
+      "default": "submitted"
     },
-    "notes": {
+    "submittedAt": {
+      "type": "datetime",
+      "default": "now"
+    },
+    "expectedSalary": {
+      "type": "string"
+    },
+    "noticePeriod": {
+      "type": "enumeration",
+      "enum": ["Immediate", "15 days", "1 month", "2 months", "3 months"]
+    },
+    "linkedinProfile": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "default": "website"
+    },
+    "referral": {
+      "type": "string"
+    },
+    "hrNotes": {
       "type": "text"
     },
-    "applied_at": {
+    "interviewDate": {
       "type": "datetime"
+    },
+    "interviewFeedback": {
+      "type": "text"
+    },
+    "salaryOffered": {
+      "type": "string"
+    },
+    "joiningDate": {
+      "type": "date"
     }
   }
 }

@@ -234,9 +234,9 @@ export function CertificatePopup({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[380px] md:max-w-md lg:max-w-lg max-h-[90vh] z-50"
+            className="fixed inset-4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-[320px] sm:max-w-[380px] md:max-w-md lg:max-w-lg max-h-[calc(100vh-2rem)] overflow-y-auto z-50"
           >
-            <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-2xl overflow-hidden overflow-y-auto max-h-[90vh]">
+            <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-2xl overflow-hidden">
               {/* Close Button */}
               <button
                 onClick={handleClose}
@@ -247,7 +247,7 @@ export function CertificatePopup({
               </button>
 
               {step === "form" ? (
-                <div className="p-4 md:p-6 lg:p-8">
+                <div className="p-3 sm:p-4 md:p-6 lg:p-8">
                   {/* Header */}
                   <div className="text-center mb-4 md:mb-6">
                     <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 mb-3 md:mb-4">
@@ -388,7 +388,7 @@ export function CertificatePopup({
                   </p>
                 </div>
               ) : (
-                <div className="p-4 md:p-6 lg:p-8">
+                <div className="p-3 sm:p-4 md:p-6 lg:p-8">
                   {/* Success Header */}
                   <div className="text-center mb-4 md:mb-6">
                     <motion.div

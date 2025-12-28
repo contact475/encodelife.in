@@ -9,33 +9,28 @@ const SQRT_5000 = Math.sqrt(5000);
 const testimonials = [
   {
     tempId: 0,
-    testimonial: "Encode Life's PLA bioplastics have transformed our packaging solutions. The quality is exceptional.",
-    by: "Rajesh Kumar, CEO at GreenPack Industries"
+    testimonial: "Encode Life can actually address the demand for sustainable alternatives to conventional plastics which can transform the consumer electronics industry.",
+    by: "E. Sivaramakrishnan, Director - Technical - Luker"
   },
   {
     tempId: 1,
-    testimonial: "Our collaboration with Encode Life has been phenomenal. Their commitment to innovation is driving India's biotech sector forward.",
-    by: "Dr. Anjali Verma, Research Director"
+    testimonial: "Encode Life is uniquely positioned to transform the Indian plastics sector by commercializing PLA, PHA, and PHB, biopolymers that offer excellent biodegradability, safety, and performance.",
+    by: "Dr. Krishan Kumar, Assistant Professor - Parul University"
   },
   {
     tempId: 2,
-    testimonial: "Switching to Encode Life's bioplastics was seamless. The environmental impact has been significant for our carbon footprint goals.",
-    by: "Amit Patel, Sustainability Officer at TechCorp"
+    testimonial: "Given the increasing global shift toward sustainable construction practices, Encode Life's multidisciplinary expertise places them in a strong position to contribute to future-focused infrastructure initiatives.",
+    by: "Vaibhav Mittal, CEO - AKC Group"
   },
   {
     tempId: 3,
-    testimonial: "The compostable packaging has been a game-changer for our food business. Customers love it!",
-    by: "Priya Sharma, Operations Head at FreshFoods Ltd"
+    testimonial: "Encode Life is paving the way for sustainable alternatives to traditional plastics. I believe Encode Life is exceptionally well positioned to leverage these materials to drive a paradigm shift in biomedical manufacturing.",
+    by: "Dr. Ritushree Kukreti, Chief Scientist - CSIR IGIB"
   },
   {
     tempId: 4,
-    testimonial: "Encode Life's specialized PLA blends for textiles are revolutionary. Perfect for our eco-friendly fashion line.",
-    by: "Vikram Malhotra, Founder at EcoTextiles"
-  },
-  {
-    tempId: 5,
-    testimonial: "For medical applications, Encode Life's PLA meets the highest standards. Their quality assurance gives us complete confidence.",
-    by: "Dr. Meera Reddy, Medical Director at HealthCare Plus"
+    testimonial: "Encode Life is addressing critical global need of sustainable and scalable alternatives to conventional plastics that can transform the electronics industry.",
+    by: "Nishi Jain, Director - Pritam Electric Co."
   },
 ];
 

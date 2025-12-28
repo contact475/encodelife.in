@@ -13,13 +13,13 @@ const advantages = [
   {
     icon: Leaf,
     title: "Direct Job Creation",
-    description: "Creating 500+ direct jobs for freshers in biotechnology, chemical engineering, quality control, and manufacturing. Our comprehensive training programs develop skilled professionals ready to lead India's bioplastics industry.",
-    stats: "500+ Jobs for Freshers",
+    description: "Creating jobs for freshers in biotechnology, chemical engineering, quality control, and manufacturing. Our comprehensive training programs develop skilled professionals ready to lead India's bioplastics industry.",
+    stats: "Jobs for Freshers",
   },
   {
     icon: TrendingDown,
     title: "Industry Collaboration",
-    description: "Strategic partnerships with IIT Guwahati, INST Mohali, and research institutions foster innovation. Joint R&D programs, internships, and knowledge transfer accelerate biotech advancement and create opportunities for young talent.",
+    description: "Strategic partnerships with research institutions foster innovation. Joint R&D programs, internships, and knowledge transfer accelerate biotech advancement and create opportunities for young talent.",
     stats: "5+ Research Partnerships",
   },
   {

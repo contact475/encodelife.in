@@ -41,8 +41,8 @@ export function FeaturesSectionWithHoverEffects() {
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Through strategic partnerships with leading research institutions like IIT Guwahati and INST Mohali, 
-              we&apos;re bridging the gap between academia and industry, creating opportunities for fresh talent 
+              Through strategic partnerships with leading research institutions,
+              we&apos;re bridging the gap between academia and industry, creating opportunities for fresh talent
               while developing cutting-edge biomaterials for a sustainable future.
             </p>
 
@@ -75,8 +75,8 @@ export function FeaturesSectionWithHoverEffects() {
         {/* Key stats below */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 md:mt-16">
           <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">500+</div>
-            <div className="text-xs md:text-sm text-muted-foreground">Direct Jobs Created</div>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">4+</div>
+            <div className="text-xs md:text-sm text-muted-foreground">Bioplastics Recovered</div>
           </div>
           <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl border border-border hover:border-green-500/50 transition-colors">
             <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 md:mb-2">5+</div>

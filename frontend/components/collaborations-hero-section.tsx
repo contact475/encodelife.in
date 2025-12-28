@@ -41,11 +41,6 @@ export function CollaborationsHeroSection() {
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">10+</div>
                 <div className="text-sm md:text-base text-white/80">Industry Collaborators</div>
               </div>
-              <div className="w-px h-12 bg-white/30"></div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
-                <div className="text-sm md:text-base text-white/80">Jobs Created</div>
-              </div>
             </div>
           </motion.div>
         </div>

@@ -5,53 +5,39 @@ import { motion } from "framer-motion";
 
 const collaborators = [
   {
-    name: "IIT Guwahati",
-    type: "Research Institution",
-    logo: "/logos/iitg.webp",
-    description: "Premier technology institute providing research collaboration in biopolymer development and material science.",
-    impact: "50+ Research Projects",
-  },
-  {
-    name: "INST Mohali",
-    type: "Research Institution", 
-    logo: "/logos/inst-mohali.webp",
-    description: "Institute of Nano Science and Technology - Strategic partnership in biotechnology research and enzyme development.",
-    impact: "30+ Joint Publications",
-  },
-  {
     name: "DPIIT",
     type: "Government Support",
     logo: "/logos/dpiit.webp",
     description: "Supporting innovation and entrepreneurship through government initiatives and policy development.",
-    impact: "Policy & Funding Support",
+    impact: "",
   },
   {
     name: "Startup India",
     type: "Government Initiative",
     logo: "/logos/startupindia.webp",
     description: "Building a strong startup ecosystem and supporting entrepreneurship across India.",
-    impact: "Ecosystem Development",
+    impact: "",
   },
   {
     name: "Make in India",
     type: "National Initiative",
     logo: "/logos/makeinindia.webp",
     description: "National initiative promoting manufacturing excellence and innovation in sustainable materials.",
-    impact: "Manufacturing Support",
+    impact: "",
   },
   {
     name: "Start in UP",
     type: "State Initiative",
     logo: "/logos/startinup.webp",
     description: "Supporting startups and entrepreneurship ecosystem in Uttar Pradesh.",
-    impact: "Regional Development",
+    impact: "",
   },
   {
     name: "Manav Rachna",
-    type: "Educational Partner",
+    type: "Partner",
     logo: "/logos/manavrachna.webp",
-    description: "Educational partner fostering sustainable development and skill building.",
-    impact: "Talent Development",
+    description: "Partner fostering sustainable development and skill building.",
+    impact: "",
   },
 ];
 

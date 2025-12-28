@@ -23,15 +23,15 @@ const reasons = [
     icon: Lightbulb,
     title: "Innovation & Research",
     description:
-      "Collaborate with IIT Guwahati and INST Mohali on cutting-edge projects. Develop specialized PLA blends and pioneering solutions.",
+      "Collaborate with leading research institutions on cutting-edge projects. Develop specialized PLA blends and pioneering solutions.",
     stats: "5+ Partnerships",
   },
   {
     icon: Users,
     title: "Collaborative Culture",
     description:
-      "Join 500+ professionals in an inclusive environment that values every voice, encourages knowledge sharing, and celebrates success.",
-    stats: "500+ Team",
+      "Join our professionals in an inclusive environment that values every voice, encourages knowledge sharing, and celebrates success.",
+    stats: "Growing Team",
   },
   {
     icon: Heart,

@@ -10,7 +10,7 @@ const teams = [
     icon: FlaskConical,
     title: "Research & Development",
     description:
-      "Lead polymer science research, develop specialized PLA blends, and collaborate with IIT Guwahati on biotechnology projects.",
+      "Lead polymer science research, develop specialized PLA blends, and collaborate with research institutions on biotechnology projects.",
     roles: ["Polymer Chemist", "Research Scientist"],
     count: "15+ positions",
   },

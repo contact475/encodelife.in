@@ -13,18 +13,6 @@ const collaborators = [
     glowColor: 'green' as const,
   },
   {
-    name: 'IIT Guwahati',
-    logo: '/logos/iitg.webp',
-    description: 'Premier technology institute providing research collaboration',
-    glowColor: 'green' as const,
-  },
-  {
-    name: 'INST Mohali',
-    logo: '/logos/inst-mohali.webp',
-    description: 'Institute of Nano Science and Technology - Autonomous research institution under DST',
-    glowColor: 'green' as const,
-  },
-  {
     name: 'Make in India',
     logo: '/logos/makeinindia.webp',
     description: 'National initiative promoting manufacturing and innovation',
@@ -33,7 +21,7 @@ const collaborators = [
   {
     name: 'Manav Rachna',
     logo: '/logos/manavrachna.webp',
-    description: 'Educational partner fostering sustainable development',
+    description: 'Partner fostering sustainable development',
     glowColor: 'green' as const,
   },
   {

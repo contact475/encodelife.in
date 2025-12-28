@@ -61,7 +61,7 @@ export function PLAManufacturing() {
               Manufacturing Excellence & Job Creation
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
-              Creating 500+ skilled jobs while transforming agricultural feedstock into high-performance bioplastics
+              Transforming agricultural feedstock into high-performance bioplastics through sustainable manufacturing
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full mt-6"></div>
           </motion.div>
@@ -202,9 +202,9 @@ export function PLAManufacturing() {
             Empowering India&apos;s Biotech Workforce
           </h3>
           <p className="text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-            Our manufacturing facility creates 500+ direct jobs for freshers in biotechnology, chemical engineering, 
-            quality control, and operations. Through comprehensive training programs and industry-academia partnerships 
-            with IIT Guwahati and INST Mohali, we&apos;re building India&apos;s skilled biotech workforce while producing 
+            Our manufacturing facility creates jobs for freshers in biotechnology, chemical engineering,
+            quality control, and operations. Through comprehensive training programs and industry-academia partnerships,
+            we&apos;re building India&apos;s skilled biotech workforce while producing
             specialized PLA blends with complete end-of-life solutions.
           </p>
         </motion.div>

@@ -115,10 +115,9 @@ export function CircularEconomySection() {
               Our Commitment to Circularity
             </h3>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              In partnership with industry leaders and academic institutions like
-              IIT Guwahati and INST Mohali, we're establishing India's first
-              corn-based biopolymer plant. Our goal: creating 500+ sustainable jobs
-              while developing special PLA blends with complete end-of-life
+              In partnership with industry leaders and academic institutions,
+              we're establishing India's first corn-based biopolymer plant.
+              We're developing special PLA blends with complete end-of-life
               solutions through industry-academia collaboration.
             </p>
           </div>

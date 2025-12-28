@@ -86,7 +86,7 @@ export default function Home() {
       id: "post-2",
       title: "Special PLA Blends: Innovation Through Collaboration",
       summary:
-        "Discover how our partnerships with IIT Guwahati and INST Mohali are developing 10+ specialized PLA formulations for diverse industries.",
+        "Discover how our partnerships with leading research institutions are developing 10+ specialized PLA formulations for diverse industries.",
       label: "Innovation",
       author: "Rajesh Kumar",
       published: "10 Dec 2024",

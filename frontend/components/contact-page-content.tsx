@@ -189,7 +189,7 @@ export default function ContactPageContent() {
                                 <div className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg hover:shadow-xl transition-shadow">
                                     <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
                                         <a
-                                            href="tel:+919711243043"
+                                            href="tel:+917000017005"
                                             className="flex flex-col items-center text-center group"
                                         >
                                             <div className="p-4 rounded-xl bg-primary/10 mb-4">
@@ -197,9 +197,6 @@ export default function ContactPageContent() {
                                             </div>
                                             <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-muted-foreground">Call Us</h4>
                                             <div className="space-y-1">
-                                                <p className="text-base md:text-lg font-semibold text-foreground group-hover:text-primary transition-colors whitespace-nowrap">
-                                                    +91 9711243043
-                                                </p>
                                                 <p className="text-base md:text-lg font-semibold text-foreground group-hover:text-primary transition-colors whitespace-nowrap">
                                                     +91 70000 17005
                                                 </p>

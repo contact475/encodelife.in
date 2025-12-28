@@ -25,7 +25,7 @@ export function AboutMissionSection() {
               To engineer and deliver accessible, scalable, high-performance biopolymers that replace fossil-based plastics across India and emerging markets.
             </p>
             <p className="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Encode Life is establishing India&apos;s first corn-based biopolymer plant, integrated with renewable energy and energy storage systems. We&apos;re creating 500+ direct jobs for freshers, developing specialized PLA blends through strategic collaborations with IIT Guwahati and INST Mohali, and establishing comprehensive end-of-life solutions for a truly circular bioeconomy.
+              Encode Life is establishing India&apos;s first corn-based biopolymer plant, integrated with renewable energy and energy storage systems. We&apos;re developing specialized PLA blends through strategic collaborations with leading research institutions and establishing comprehensive end-of-life solutions for a truly circular bioeconomy.
             </p>
             <div className="relative inline-flex items-center justify-center mt-8 md:mt-10 group">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 group-hover:shadow-lg group-hover:shadow-green-500/30 transition-all"></div>

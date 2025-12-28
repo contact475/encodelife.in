@@ -5,7 +5,7 @@ import { EncodeLifeHeader } from "@/components/encode-life-header";
 export const metadata: Metadata = {
   title: "Collaborations - Encode Life | Industry Partnerships & Research",
   description: "Explore our strategic partnerships with leading research institutions, industry collaborators, and supporters driving innovation in sustainable bioplastics and biotechnology.",
-  keywords: ["collaborations", "partnerships", "research institutions", "IIT Guwahati", "INST Mohali", "industry collaboration", "biotech partnerships"],
+  keywords: ["collaborations", "partnerships", "research institutions", "industry collaboration", "biotech partnerships"],
 };
 
 export default function CollaborationsPage() {

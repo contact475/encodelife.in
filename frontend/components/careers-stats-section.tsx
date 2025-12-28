@@ -16,7 +16,7 @@ const stats = [
     icon: GraduationCap,
     label: "Research Partnerships",
     value: "5+",
-    description: "Strategic collaborations with IIT Guwahati, INST Mohali, and leading research institutions",
+    description: "Strategic collaborations with leading research institutions",
     highlight: "Academia-Industry Bridge",
   },
   {

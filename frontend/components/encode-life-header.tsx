@@ -315,12 +315,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <div className="space-y-3">
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <Phone className="h-4 w-4" />
-            <a href="tel:+919711243043" className="hover:text-primary transition-colors">
-              +91 9711243043
-            </a>
-          </div>
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <Phone className="h-4 w-4" />
             <a href="tel:+917000017005" className="hover:text-primary transition-colors">
               +91 70000 17005
             </a>

@@ -15,7 +15,7 @@ const testimonials = [
   {
     tempId: 1,
     testimonial: "Our collaboration with Encode Life has been phenomenal. Their commitment to innovation is driving India's biotech sector forward.",
-    by: "Dr. Anjali Verma, Research Director at IIT Guwahati"
+    by: "Dr. Anjali Verma, Research Director"
   },
   {
     tempId: 2,

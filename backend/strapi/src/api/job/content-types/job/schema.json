@@ -1,0 +1,132 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": "Job postings and career opportunities"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "Biotechnology",
+        "R&D",
+        "Manufacturing",
+        "Sales",
+        "Marketing",
+        "Quality Assurance",
+        "Human Resources",
+        "Finance",
+        "Operations",
+        "IT"
+      ],
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "jobType": {
+      "type": "enumeration",
+      "enum": ["Full-time", "Part-time", "Contract", "Internship"],
+      "required": true,
+      "default": "Full-time"
+    },
+    "experienceLevel": {
+      "type": "enumeration",
+      "enum": [
+        "Entry-Level (0-1 years)",
+        "Mid-Level (2-4 years)", 
+        "Senior (5+ years)",
+        "Executive (10+ years)"
+      ],
+      "required": true
+    },
+    "salaryRange": {
+      "type": "string",
+      "required": true
+    },
+    "openings": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "applicationDeadline": {
+      "type": "date",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500
+    },
+    "aboutRole": {
+      "type": "richtext",
+      "required": true
+    },
+    "keyResponsibilities": {
+      "type": "richtext",
+      "required": true
+    },
+    "requirements": {
+      "type": "richtext",
+      "required": true
+    },
+    "preferredQualifications": {
+      "type": "richtext"
+    },
+    "benefitsAndPerks": {
+      "type": "richtext"
+    },
+    "teamSize": {
+      "type": "string"
+    },
+    "reportsTo": {
+      "type": "string"
+    },
+    "workEnvironment": {
+      "type": "text"
+    },
+    "applicationProcess": {
+      "type": "richtext"
+    },
+    "companyInfo": {
+      "type": "richtext"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "seoTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "seoDescription": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "tags": {
+      "type": "json"
+    }
+  }
+}

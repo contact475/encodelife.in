@@ -120,7 +120,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="mt-2 md:mt-3 text-center text-foreground/70 text-xs md:text-sm">
-          © 2025{" "}
+          © 2026{" "}
           <Link href="/" className="hover:text-green-500 transition font-semibold text-foreground">
             Encode Life
           </Link>
